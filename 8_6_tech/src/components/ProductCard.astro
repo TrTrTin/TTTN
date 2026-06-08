@@ -1,12 +1,12 @@
 ---
 import "../styles/product-card.css";
 
-const { name, price } = Astro.props;
+const { name, price, image } = Astro.props;
 ---
 
 <div class="card">
     <img
-        src="https://placehold.co/300x200"
+        src={image.src}
         alt={name}
     />
 
