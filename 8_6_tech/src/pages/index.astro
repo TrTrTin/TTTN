@@ -1,12 +1,54 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import MainLayout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ProductCard from "../components/ProductCard.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<h1 class="text-5xl font-bold text-red-500">
-  Tailwind 
-</h1>
+<MainLayout title="Trang chủ">
+    <Header />
+
+    <main class="max-w-6xl mx-auto p-6">
+
+        <section class="text-center py-10">
+            <h2 class="text-4xl font-bold mb-4">
+                Chào mừng đến với Astro Shop
+            </h2>
+
+            <p class="text-gray-600">
+                Website mẫu sử dụng Astro + Tailwind CSS
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-6">
+                Sản phẩm nổi bật
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <ProductCard
+                    name="Laptop Gaming"
+                    price="25.000.000đ"
+                />
+
+                <ProductCard
+                    name="Bàn phím cơ"
+                    price="1.500.000đ"
+                />
+
+                <ProductCard
+                    name="Chuột Gaming"
+                    price="800.000đ"
+                />
+
+            </div>
+        </section>
+
+    </main>
+
+    <Footer />
+</MainLayout>
