@@ -16,16 +16,9 @@ const Components1 = () => {
                     'public/images/background.jpg',
             }}
         >
-            <div className="relative min-h-screen overflow-hidden">
-                {/* lớp phủ làm mờ nền */}
-                <div className="absolute inset-0 bg-blue-500/20 backdrop-blur-[2px]" />
+           
+                
 
-                {/* sóng ánh sáng */}
-                <div className="absolute top-0 right-0 w-full h-full opacity-70">
-                    <div className="absolute top-0 right-0 w-[900px] h-[500px] rounded-full bg-gradient-to-r from-pink-300/30 via-white/20 to-cyan-200/20 blur-3xl" />
-                </div>
-
-                {/* card glass */}
                 <div className="relative z-10 flex items-center min-h-screen pl-20">
                     <div
                         className="
@@ -93,7 +86,6 @@ Với tinh thần Hợp tác - Đổi mới - Phát triển, CLB đóng vai trò
                         </div>
                     </div>
                 </div>
-            </div>
         </AdminSection>
     );
 };
