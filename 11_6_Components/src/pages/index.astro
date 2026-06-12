@@ -1,15 +1,18 @@
 ---
-import Components1 from "../components/admin-components1.jsx";
-import "../styles/global.css";
+
+
+import Editor from "../components/editor.jsx";
+
+
 ---
 
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <title>Sen Hồng</title>
+    <title>Puck Editor</title>
   </head>
 
   <body>
-    <Components1 client:load />
+    <Editor client:only="react" />
   </body>
 </html>

@@ -4,6 +4,7 @@ import AdminText from './components/admin-text';
 import AdminImage from './components/admin-image';
 import AdminSection from './components/admin-section';
 import AdminHero from './components/admin-hero';
+import Components1 from './components/admin-components1';
 
 //Config — đăng ký 5 components với fields + defaultProps + render.
 
@@ -189,14 +190,236 @@ export const puckConfig = {
         layout: { align: 'center' }
       },
       render: (props) => <AdminHero {...props} />
+    },
+    Components1: {
+  label: 'Sen Hồng',
+  fields: {
+     backgroundImage: {
+      type: 'text',
+      label: 'URL Background'
+  },
+
+    // ================= POSITION SYSTEM =================
+    positionX: {
+      type: 'select',
+      label: 'Vị trí ngang',
+      options: [
+        { label: 'Trái', value: 'left' },
+        { label: 'Giữa', value: 'center' },
+        { label: 'Phải', value: 'right' }
+      ]
+    },
+
+    paddingLeft: {
+      type: 'number',
+      label: 'Padding trái',
+      min: 0,
+      max: 300
+    },
+
+    paddingTop: {
+      type: 'number',
+      label: 'Padding trên',
+      min: 0,
+      max: 300
+    },
+
+    // ================= CARD =================
+    cardWidth: {
+      type: 'number',
+      label: 'Chiều rộng card',
+      min: 280,
+      max: 600
+    },
+
+    cardHeight: {
+      type: 'number',
+      label: 'Chiều cao card',
+      min: 280,
+      max: 600
+    },
+
+    cardBgOpacity: {
+      type: 'number',
+      label: 'Độ trong nền',
+      min: 0,
+      max: 1,
+      step: 0.1
+    },
+
+    cardBlur: {
+      type: 'number',
+      label: 'Blur nền',
+      min: 0,
+      max: 30
+    },
+
+    cardPadding: {
+      type: 'number',
+      label: 'Padding card',
+      min: 10,
+      max: 60
+    },
+
+    radiusTL: {
+      type: 'number',
+      label: 'Bo góc trên trái',
+      min: 0,
+      max: 200
+    },
+
+    radiusTR: {
+      type: 'number',
+      label: 'Bo góc trên phải',
+      min: 0,
+      max: 200
+    },
+
+    radiusBR: {
+      type: 'number',
+      label: 'Bo góc dưới phải',
+      min: 0,
+      max: 200
+    },
+
+    radiusBL: {
+      type: 'number',
+      label: 'Bo góc dưới trái',
+      min: 0,
+      max: 200
+    },
+
+    // ================= TITLE LINE =================
+    titleLine: {
+      type: 'text',
+      label: 'Dòng phụ'
+    },
+
+    titleLineColor: {
+      type: 'text',
+      label: 'Màu dòng phụ'
+    },
+
+    titleLineSize: {
+      type: 'number',
+      label: 'Cỡ chữ dòng phụ',
+      min: 10,
+      max: 40
+    },
+
+    // ================= TITLE =================
+    title: {
+      type: 'text',
+      label: 'Tiêu đề'
+    },
+
+    titleColor: {
+      type: 'text',
+      label: 'Màu tiêu đề'
+    },
+
+    titleSize: {
+      type: 'number',
+      label: 'Cỡ chữ tiêu đề',
+      min: 20,
+      max: 100
+    },
+
+    // ================= DESCRIPTION =================
+    description: {
+      type: 'textarea',
+      label: 'Mô tả'
+    },
+
+    descriptionColor: {
+      type: 'text',
+      label: 'Màu mô tả'
+    },
+
+    descriptionSize: {
+      type: 'number',
+      label: 'Cỡ chữ mô tả',
+      min: 12,
+      max: 30
+    },
+
+    // ================= BUTTON =================
+    buttonText: {
+      type: 'text',
+      label: 'Text nút'
+    },
+
+    buttonColor: {
+      type: 'text',
+      label: 'Màu nút'
+    },
+
+    buttonSize: {
+      type: 'select',
+      label: 'Kích cỡ nút',
+      options: [
+        { label: 'Nhỏ', value: 'sm' },
+        { label: 'Vừa', value: 'md' },
+        { label: 'Lớn', value: 'lg' }
+      ]
     }
+
+  },
+
+  defaultProps: {
+    backgroundImage: '/images/background.jpg',
+
+  // POSITION
+  positionX: 'left',
+  paddingLeft: 80,
+  paddingTop: 0,
+
+  // CARD (GIỚI HẠN NHỎ)
+  cardWidth: 420,
+  cardHeight: 280,
+  cardBgOpacity: 0.12,
+  cardBlur: 16,
+  cardPadding: 28,
+
+  radiusTL: 10,
+  radiusTR: 80,
+  radiusBR: 10,
+  radiusBL: 80,
+
+  // TITLE LINE
+  titleLine: "LAN TỎA GIÁ TRỊ ĐẤT",
+  titleLineColor: "#ffffff",
+  titleLineSize: 14,
+
+  // TITLE
+  title: "Sen Hồng",
+  titleColor: "#ffffff",
+  titleSize: 56,
+
+  // DESCRIPTION
+  description: `CLB Doanh nhân Đồng Tháp tại TPHCM quy tụ những người con quê hương Đất Sen Hồng.`,
+
+  descriptionColor: "#ffffff",
+  descriptionSize: 14,
+
+  // BUTTON
+  buttonText: "Tham gia cộng đồng",
+  buttonColor: "#06b6d4",
+  buttonSize: "md"
+  
+  },
+
+  render: (props) => <Components1 {...props} />
+}
   },
 
   // Sidebar categories
   categoryGroups: [
     { title: 'Cơ bản', components: ['Heading', 'Text', 'Image'] },
     { title: 'Layout', components: ['Section'] },
-    { title: 'Nâng cao', components: ['Hero'] }
+    { title: 'Nâng cao', components: ['Hero'] },
+    { title: 'Landing Page', components: ['Components1']
+}
   ],
 
   // Root config
