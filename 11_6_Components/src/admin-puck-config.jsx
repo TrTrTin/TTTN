@@ -5,6 +5,8 @@ import AdminImage from './components/admin-image';
 import AdminSection from './components/admin-section';
 import AdminHero from './components/admin-hero';
 import Components1 from './components/admin-components1';
+import Components2 from './components/admin-components2';
+import Components3 from './components/admin-components3';
 
 //Config — đăng ký 5 components với fields + defaultProps + render.
 
@@ -191,6 +193,7 @@ export const puckConfig = {
       },
       render: (props) => <AdminHero {...props} />
     },
+
     Components1: {
   label: 'Sen Hồng',
   fields: {
@@ -410,7 +413,567 @@ export const puckConfig = {
   },
 
   render: (props) => <Components1 {...props} />
-}
+    },
+
+    Components2: {
+      label: 'Ban Chuyên Môn',
+
+      fields: {
+
+        title: {
+          type: 'text',
+          label: 'Tiêu đề'
+        },
+
+        subtitle: {
+          type: 'textarea',
+          label: 'Mô tả'
+        },
+
+        titleColor: {
+          type: 'text',
+          label: 'Màu tiêu đề'
+        },
+
+        subtitleColor: {
+          type: 'text',
+          label: 'Màu mô tả'
+        },
+
+        titleSize: {
+          type: 'number',
+          label: 'Size tiêu đề',
+          min: 20,
+          max: 80
+        },
+
+        subtitleSize: {
+          type: 'number',
+          label: 'Size mô tả',
+          min: 12,
+          max: 40
+        },
+
+        gradientFrom: {
+          type: 'text',
+          label: 'Gradient từ'
+        },
+
+        gradientTo: {
+          type: 'text',
+          label: 'Gradient đến'
+        },
+
+        cards: {
+          type: 'array',
+          label: 'Danh sách ban',
+
+          arrayFields: {
+
+            icon: {
+              type: 'text',
+              label: 'Icon URL'
+            },
+
+            iconSize: {
+              type: 'number',
+              label: 'Size icon',
+              min: 20,
+              max: 150
+            },
+
+            title: {
+              type: 'text',
+              label: 'Tiêu đề'
+            },
+
+            description: {
+              type: 'textarea',
+              label: 'Mô tả'
+            },
+
+            titleColor: {
+              type: 'text',
+              label: 'Màu tiêu đề'
+            },
+
+            descriptionColor: {
+              type: 'text',
+              label: 'Màu mô tả'
+            },
+
+            titleSize: {
+              type: 'number',
+              label: 'Size tiêu đề'
+            },
+
+            descriptionSize: {
+              type: 'number',
+              label: 'Size mô tả'
+            },
+
+            cardHeight: {
+              type: 'number',
+              label: 'Chiều cao card'
+            },
+
+            cardGradientFrom: {
+              type: 'text',
+              label: 'Gradient từ'
+            },
+
+            cardGradientTo: {
+              type: 'text',
+              label: 'Gradient đến'
+            },
+
+            radiusTL: {
+              type: 'number',
+              label: 'Bo góc TL'
+            },
+
+            radiusTR: {
+              type: 'number',
+              label: 'Bo góc TR'
+            },
+
+            radiusBR: {
+              type: 'number',
+              label: 'Bo góc BR'
+            },
+
+            radiusBL: {
+              type: 'number',
+              label: 'Bo góc BL'
+            },
+
+            buttonText: {
+              type: 'text',
+              label: 'Text nút'
+            },
+
+            buttonColor: {
+              type: 'text',
+              label: 'Màu nút'
+            },
+
+            buttonTextColor: {
+              type: 'text',
+              label: 'Màu chữ nút'
+            },
+
+            buttonSize: {
+              type: 'select',
+              label: 'Size nút',
+              options: [
+                { label: 'Nhỏ', value: 'sm' },
+                { label: 'Vừa', value: 'md' },
+                { label: 'Lớn', value: 'lg' }
+              ]
+            }
+          },
+
+          getItemSummary: (item) => item.title
+        }
+      },
+
+      defaultProps: {
+
+        title: "CÁC BAN CHUYÊN MÔN",
+
+        subtitle:
+          "CLB DOANH NHÂN ĐỒNG THÁP TẠI TP. HỒ CHÍ MINH",
+
+        titleColor: "#1f4b89",
+
+        subtitleColor: "#1f4b89",
+
+        titleSize: 42,
+
+        subtitleSize: 22,
+
+        gradientFrom: "#f5f7ff",
+
+        gradientTo: "#e8eefb",
+
+        cards: [
+
+          {
+            icon: "/public/images/kinhTe.png",
+            iconSize: 40,
+
+            title: "Ban Kinh tế - Đầu tư",
+
+            description: "",
+
+            titleColor: "#ffffff",
+
+            descriptionColor: "#ffffff",
+
+            titleSize: 20,
+
+            descriptionSize: 16,
+
+            cardHeight: 90,
+
+            cardGradientFrom: "#38bdf8",
+
+            cardGradientTo: "#0f5da8",
+
+            radiusTL: 80,
+            radiusTR: 20,
+            radiusBR: 80,
+            radiusBL: 20,
+
+            buttonText: "Xem hoạt động",
+
+            buttonColor: "#5f9fd2",
+
+            buttonTextColor: "#ffffff",
+
+            buttonSize: "md"
+          },
+
+          {
+            icon: "/public/images/theThao.png",
+            iconSize: 40,
+
+            title: "Ban Văn hóa - Thể thao",
+
+            description: "",
+
+            titleColor: "#ffffff",
+
+            descriptionColor: "#ffffff",
+
+            titleSize: 20,
+
+            descriptionSize: 16,
+
+            cardHeight: 90,
+
+            cardGradientFrom: "#38bdf8",
+
+            cardGradientTo: "#0f5da8",
+
+            radiusTL: 80,
+            radiusTR: 20,
+            radiusBR: 80,
+            radiusBL: 20,
+
+            buttonText: "Xem hoạt động",
+
+            buttonColor: "#5f9fd2",
+
+            buttonTextColor: "#ffffff",
+
+            buttonSize: "md"
+          }
+        ]
+      },
+
+      render: (props) => <Components2 {...props} />
+    },
+
+    Components3: {
+    label: "Giới thiệu & Cơ cấu",
+
+    fields: {
+
+    title: {
+      type: "text",
+      label: "Tiêu đề"
+    },
+
+    subtitle: {
+      type: "textarea",
+      label: "Mô tả"
+    },
+
+    titleColor: {
+      type: "text",
+      label: "Màu tiêu đề"
+    },
+
+    subtitleColor: {
+      type: "text",
+      label: "Màu mô tả"
+    },
+
+    titleSize: {
+      type: "number",
+      label: "Size tiêu đề",
+      min: 20,
+      max: 80
+    },
+
+    subtitleSize: {
+      type: "number",
+      label: "Size mô tả",
+      min: 12,
+      max: 40
+    },
+
+    gradientFrom: {
+      type: "text",
+      label: "Gradient từ"
+    },
+
+    gradientTo: {
+      type: "text",
+      label: "Gradient đến"
+    },
+
+    cards: {
+      type: "array",
+      label: "Danh sách khối",
+
+      arrayFields: {
+
+        title: {
+          type: "text",
+          label: "Tiêu đề khối"
+        },
+
+        content: {
+          type: "textarea",
+          label: "Nội dung"
+        },
+
+        image: {
+          type: "text",
+          label: "Ảnh"
+        },
+
+        titleColor: {
+          type: "text",
+          label: "Màu tiêu đề"
+        },
+
+        contentColor: {
+          type: "text",
+          label: "Màu nội dung"
+        },
+
+        titleSize: {
+          type: "number",
+          label: "Size tiêu đề"
+        },
+
+        contentSize: {
+          type: "number",
+          label: "Size nội dung"
+        },
+
+        cardBgColor: {
+          type: "text",
+          label: "Màu nền card"
+        },
+
+        cardRadius: {
+          type: "number",
+          label: "Bo góc card"
+        },
+
+        cardPadding: {
+          type: "number",
+          label: "Padding card"
+        },
+
+        members: {
+          type: "array",
+          label: "Danh sách thành viên",
+
+          arrayFields: {
+
+            avatar: {
+              type: "text",
+              label: "Avatar"
+            },
+
+            avatarSize: {
+              type: "number",
+              label: "Size avatar"
+            },
+
+            fullName: {
+              type: "text",
+              label: "Họ tên"
+            },
+
+            clubPosition: {
+              type: "text",
+              label: "Chức vụ CLB"
+            },
+
+            companyPosition: {
+              type: "text",
+              label: "Chức vụ doanh nghiệp"
+            },
+
+            companyName: {
+              type: "text",
+              label: "Tên doanh nghiệp"
+            },
+
+            fullNameColor: {
+              type: "text",
+              label: "Màu họ tên"
+            },
+
+            clubPositionColor: {
+              type: "text",
+              label: "Màu chức vụ CLB"
+            },
+
+            companyPositionColor: {
+              type: "text",
+              label: "Màu chức vụ DN"
+            },
+
+            companyNameColor: {
+              type: "text",
+              label: "Màu tên DN"
+            },
+
+            fullNameSize: {
+              type: "number",
+              label: "Size họ tên"
+            },
+
+            clubPositionSize: {
+              type: "number",
+              label: "Size chức vụ CLB"
+            },
+
+            companyPositionSize: {
+              type: "number",
+              label: "Size chức vụ DN"
+            },
+
+            companyNameSize: {
+              type: "number",
+              label: "Size tên DN"
+            }
+          },
+
+          getItemSummary: (item) =>
+            item.fullName || "Thành viên"
+        }
+      },
+
+      getItemSummary: (item) =>
+        item.title || "Khối mới"
+    }
+
+    },
+
+    defaultProps: {
+
+    title: "GIỚI THIỆU",
+
+    subtitle:
+      "CLB DOANH NHÂN ĐỒNG THÁP TẠI TP. HỒ CHÍ MINH",
+
+    titleColor: "#1f4b89",
+
+    subtitleColor: "#666666",
+
+    titleSize: 42,
+
+    subtitleSize: 18,
+
+    gradientFrom: "#f5f7ff",
+
+    gradientTo: "#eef4ff",
+
+    cards: [
+
+      {
+        title: "VỀ CÂU LẠC BỘ",
+
+        content:
+          "CLB Doanh nhân Đồng Tháp tại TP.HCM là nơi kết nối cộng đồng doanh nhân, thúc đẩy hợp tác và phát triển kinh tế.",
+
+        image: "/images/about-club.png",
+
+        titleColor: "#1f4b89",
+
+        contentColor: "#333333",
+
+        titleSize: 30,
+
+        contentSize: 16,
+
+        cardBgColor: "#ffffff",
+
+        cardRadius: 20,
+
+        cardPadding: 30,
+
+        members: []
+      },
+
+      {
+        title: "CƠ CẤU TỔ CHỨC",
+
+        content: "",
+
+        image: "",
+
+        titleColor: "#1f4b89",
+
+        contentColor: "#333333",
+
+        titleSize: 30,
+
+        contentSize: 16,
+
+        cardBgColor: "#ffffff",
+
+        cardRadius: 20,
+
+        cardPadding: 30,
+
+        members: [
+          {
+            avatar: "/images/member1.jpg",
+
+            avatarSize: 80,
+
+            fullName: "Nguyễn Văn A",
+
+            clubPosition: "Chủ tịch CLB",
+
+            companyPosition: "Tổng Giám đốc",
+
+            companyName: "ABC Corporation",
+
+            fullNameColor: "#1f4b89",
+
+            clubPositionColor: "#333333",
+
+            companyPositionColor: "#333333",
+
+            companyNameColor: "#333333",
+
+            fullNameSize: 18,
+
+            clubPositionSize: 15,
+
+            companyPositionSize: 15,
+
+            companyNameSize: 15
+          }
+        ]
+      }
+    ]
+
+    },
+
+    render: (props) => <Components3 {...props} />
+    }
+
   },
 
   // Sidebar categories
@@ -418,8 +981,10 @@ export const puckConfig = {
     { title: 'Cơ bản', components: ['Heading', 'Text', 'Image'] },
     { title: 'Layout', components: ['Section'] },
     { title: 'Nâng cao', components: ['Hero'] },
-    { title: 'Landing Page', components: ['Components1']
-}
+    { title: 'Sen Hồng ', components: ['Components1']},
+    { title: 'Chuyên Môn', components: ['Components2']},
+    { title: 'Cơ cấu tổ chức', components: ['Components3']}
+
   ],
 
   // Root config

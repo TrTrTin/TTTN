@@ -60,7 +60,7 @@ const Components1 = (props) => {
       }}
     >
 
-      {/* ✅ FIXED WRAPPER */}
+      
       <div
         className={`
           relative z-10 flex items-start pt-24
