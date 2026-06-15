@@ -20,6 +20,13 @@ const Components2 = (props) => {
   } = props;
 
   return (
+    <div
+      style={{
+        minHeight: '600px'
+      }}
+    >
+
+
     <AdminSection
       container="2xl"
       padding_x={0}
@@ -65,45 +72,59 @@ const Components2 = (props) => {
         {/* GRID */}
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "24px"
-            }}
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "48px", // tăng khoảng cách giữa các card
+            width: "100%",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
         >
           {cards.map((card, index) => (
             <div
               key={index}
               className="shadow-lg"
               style={{
+                width: "320px",
+                height: "170px",
+
                 background: `linear-gradient(180deg, ${card.cardGradientFrom}, ${card.cardGradientTo})`,
-                minHeight: `${card.cardHeight || 300}px`,
 
                 borderTopLeftRadius: `${card.radiusTL || 80}px`,
-                borderTopRightRadius: `${card.radiusTR || 20}px`,
+                borderTopRightRadius: `${card.radiusTR || 0}px`,
                 borderBottomRightRadius: `${card.radiusBR || 80}px`,
-                borderBottomLeftRadius: `${card.radiusBL || 20}px`,
+                borderBottomLeftRadius: `${card.radiusBL || 0}px`,
 
-                padding: "20px 15px"
+                padding: "20px 15px",
+
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+
+                flex: "0 0 320px", // khóa kích thước card
               }}
             >
               {/* ICON */}
-              <div className="flex justify-center mb-6">
+              <div className="mb-6">
                 <img
                   src={card.icon}
                   alt=""
                   style={{
                     width: `${card.iconSize || 60}px`,
-                    height: `${card.iconSize || 60}px`
+                    height: `${card.iconSize || 60}px`,
+                    objectFit: "contain"
                   }}
                 />
               </div>
 
               {/* TITLE */}
               <div
-                className="text-center font-bold"
                 style={{
                   color: card.titleColor,
-                  fontSize: `${card.titleSize}px`
+                  fontSize: `${card.titleSize}px`,
+                  fontWeight: 700,
+                  textAlign: "center",
                 }}
               >
                 {card.title}
@@ -111,23 +132,31 @@ const Components2 = (props) => {
 
               {/* DESCRIPTION */}
               <div
-                className="text-center mt-4"
                 style={{
                   color: card.descriptionColor,
-                  fontSize: `${card.descriptionSize}px`
+                  fontSize: `${card.descriptionSize}px`,
+                  textAlign: "center",
+                  marginTop: "16px",
+                  flex: 1,
+                  overflow: "hidden",
                 }}
               >
                 <AdminText content={card.description} />
               </div>
 
               {/* BUTTON */}
-              <div className="flex justify-center mt-8">
+              <div
+                style={{
+                  marginTop: "auto",
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                }}
+              >
                 <button
                   style={{
                     backgroundColor: card.buttonColor,
-
                     color: card.buttonTextColor,
-
                     borderRadius: "9999px",
 
                     padding:
@@ -142,7 +171,7 @@ const Components2 = (props) => {
                         ? "14px"
                         : card.buttonSize === "lg"
                         ? "18px"
-                        : "16px"
+                        : "16px",
                   }}
                 >
                   {card.buttonText}
@@ -153,6 +182,8 @@ const Components2 = (props) => {
         </div>
       </div>
     </AdminSection>
+
+    </div>
   );
 };
 

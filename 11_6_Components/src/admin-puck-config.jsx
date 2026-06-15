@@ -7,6 +7,9 @@ import AdminHero from './components/admin-hero';
 import Components1 from './components/admin-components1';
 import Components2 from './components/admin-components2';
 import Components3 from './components/admin-components3';
+import ComponentHeader from './components/admin-components-header';
+import ComponentCarousel from './components/admin-components-carousel';
+import ComponentFooter from './components/admin-component-footer';
 
 //Config — đăng ký 5 components với fields + defaultProps + render.
 
@@ -295,7 +298,8 @@ export const puckConfig = {
     // ================= TITLE LINE =================
     titleLine: {
       type: 'text',
-      label: 'Dòng phụ'
+      label: 'Dòng phụ',
+      contentEditable: true,
     },
 
     titleLineColor: {
@@ -313,7 +317,8 @@ export const puckConfig = {
     // ================= TITLE =================
     title: {
       type: 'text',
-      label: 'Tiêu đề'
+      label: 'Tiêu đề',
+      contentEditable: true,
     },
 
     titleColor: {
@@ -331,7 +336,8 @@ export const puckConfig = {
     // ================= DESCRIPTION =================
     description: {
       type: 'textarea',
-      label: 'Mô tả'
+      label: 'Mô tả',
+      contentEditable: true,
     },
 
     descriptionColor: {
@@ -349,7 +355,8 @@ export const puckConfig = {
     // ================= BUTTON =================
     buttonText: {
       type: 'text',
-      label: 'Text nút'
+      label: 'Text nút',
+      contentEditable: true,
     },
 
     buttonColor: {
@@ -422,12 +429,15 @@ export const puckConfig = {
 
         title: {
           type: 'text',
-          label: 'Tiêu đề'
+          label: 'Tiêu đề',
+          contentEditable: true,
+
         },
 
         subtitle: {
           type: 'textarea',
-          label: 'Mô tả'
+          label: 'Mô tả',
+          contentEditable: true,
         },
 
         titleColor: {
@@ -467,6 +477,7 @@ export const puckConfig = {
         cards: {
           type: 'array',
           label: 'Danh sách ban',
+          contentEditable: true,
 
           arrayFields: {
 
@@ -484,12 +495,14 @@ export const puckConfig = {
 
             title: {
               type: 'text',
-              label: 'Tiêu đề'
+              label: 'Tiêu đề',
+              contentEditable: true,
             },
 
             description: {
               type: 'textarea',
-              label: 'Mô tả'
+              label: 'Mô tả',
+              contentEditable: true,
             },
 
             titleColor: {
@@ -549,7 +562,8 @@ export const puckConfig = {
 
             buttonText: {
               type: 'text',
-              label: 'Text nút'
+              label: 'Text nút',
+              contentEditable: true,
             },
 
             buttonColor: {
@@ -621,9 +635,9 @@ export const puckConfig = {
             cardGradientTo: "#0f5da8",
 
             radiusTL: 80,
-            radiusTR: 20,
+            radiusTR: 0,
             radiusBR: 80,
-            radiusBL: 20,
+            radiusBL: 0,
 
             buttonText: "Xem hoạt động",
 
@@ -633,6 +647,79 @@ export const puckConfig = {
 
             buttonSize: "md"
           },
+
+          {
+            icon: "/public/images/kinhTe.png",
+            iconSize: 40,
+
+            title: "Ban Kinh tế - Đầu tư",
+
+            description: "",
+
+            titleColor: "#ffffff",
+
+            descriptionColor: "#ffffff",
+
+            titleSize: 20,
+
+            descriptionSize: 16,
+
+            cardHeight: 90,
+
+            cardGradientFrom: "#38bdf8",
+
+            cardGradientTo: "#0f5da8",
+
+            radiusTL: 80,
+            radiusTR: 0,
+            radiusBR: 80,
+            radiusBL: 0,
+
+            buttonText: "Xem hoạt động",
+
+            buttonColor: "#5f9fd2",
+
+            buttonTextColor: "#ffffff",
+
+            buttonSize: "md"
+          },
+
+          {
+            icon: "/public/images/kinhTe.png",
+            iconSize: 40,
+
+            title: "Ban Kinh tế - Đầu tư",
+
+            description: "",
+
+            titleColor: "#ffffff",
+
+            descriptionColor: "#ffffff",
+
+            titleSize: 20,
+
+            descriptionSize: 16,
+
+            cardHeight: 90,
+
+            cardGradientFrom: "#38bdf8",
+
+            cardGradientTo: "#0f5da8",
+
+            radiusTL: 80,
+            radiusTR: 0,
+            radiusBR: 80,
+            radiusBL: 0,
+
+            buttonText: "Xem hoạt động",
+
+            buttonColor: "#5f9fd2",
+
+            buttonTextColor: "#ffffff",
+
+            buttonSize: "md"
+          },
+
 
           {
             icon: "/public/images/theThao.png",
@@ -657,9 +744,9 @@ export const puckConfig = {
             cardGradientTo: "#0f5da8",
 
             radiusTL: 80,
-            radiusTR: 20,
+            radiusTR: 0,
             radiusBR: 80,
-            radiusBL: 20,
+            radiusBL: 0,
 
             buttonText: "Xem hoạt động",
 
@@ -668,7 +755,43 @@ export const puckConfig = {
             buttonTextColor: "#ffffff",
 
             buttonSize: "md"
-          }
+          },
+
+          {
+            icon: "/public/images/kinhTe.png",
+            iconSize: 40,
+
+            title: "Ban Kinh tế - Đầu tư",
+
+            description: "",
+
+            titleColor: "#ffffff",
+
+            descriptionColor: "#ffffff",
+
+            titleSize: 20,
+
+            descriptionSize: 16,
+
+            cardHeight: 90,
+
+            cardGradientFrom: "#38bdf8",
+
+            cardGradientTo: "#0f5da8",
+
+            radiusTL: 80,
+            radiusTR: 0,
+            radiusBR: 80,
+            radiusBL: 0,
+
+            buttonText: "Xem hoạt động",
+
+            buttonColor: "#5f9fd2",
+
+            buttonTextColor: "#ffffff",
+
+            buttonSize: "md"
+          },
         ]
       },
 
@@ -682,12 +805,14 @@ export const puckConfig = {
 
     title: {
       type: "text",
-      label: "Tiêu đề"
+      label: "Tiêu đề",
+      contentEditable: true,
     },
 
     subtitle: {
       type: "textarea",
-      label: "Mô tả"
+      label: "Mô tả",
+      contentEditable: true,
     },
 
     titleColor: {
@@ -732,12 +857,14 @@ export const puckConfig = {
 
         title: {
           type: "text",
-          label: "Tiêu đề khối"
+          label: "Tiêu đề khối",
+          contentEditable: true,
         },
 
         content: {
           type: "textarea",
-          label: "Nội dung"
+          label: "Nội dung",
+          contentEditable: true,
         },
 
         image: {
@@ -798,22 +925,26 @@ export const puckConfig = {
 
             fullName: {
               type: "text",
-              label: "Họ tên"
+              label: "Họ tên",
+              contentEditable: true,
             },
 
             clubPosition: {
               type: "text",
-              label: "Chức vụ CLB"
+              label: "Chức vụ CLB",
+              contentEditable: true,
             },
 
             companyPosition: {
               type: "text",
-              label: "Chức vụ doanh nghiệp"
+              label: "Chức vụ doanh nghiệp",
+              contentEditable: true,
             },
 
             companyName: {
               type: "text",
-              label: "Tên doanh nghiệp"
+              label: "Tên doanh nghiệp",
+              contentEditable: true,
             },
 
             fullNameColor: {
@@ -895,7 +1026,7 @@ export const puckConfig = {
         content:
           "CLB Doanh nhân Đồng Tháp tại TP.HCM là nơi kết nối cộng đồng doanh nhân, thúc đẩy hợp tác và phát triển kinh tế.",
 
-        image: "/images/about-club.png",
+        image: "/images/office_background.jpg",
 
         titleColor: "#1f4b89",
 
@@ -937,7 +1068,67 @@ export const puckConfig = {
 
         members: [
           {
-            avatar: "/images/member1.jpg",
+            avatar: "/images/member1.png",
+
+            avatarSize: 80,
+
+            fullName: "Nguyễn Văn A",
+
+            clubPosition: "Chủ tịch CLB",
+
+            companyPosition: "Tổng Giám đốc",
+
+            companyName: "ABC Corporation",
+
+            fullNameColor: "#1f4b89",
+
+            clubPositionColor: "#333333",
+
+            companyPositionColor: "#333333",
+
+            companyNameColor: "#333333",
+
+            fullNameSize: 18,
+
+            clubPositionSize: 15,
+
+            companyPositionSize: 15,
+
+            companyNameSize: 15
+          },
+
+          {
+            avatar: "/images/member1.png",
+
+            avatarSize: 80,
+
+            fullName: "Nguyễn Văn A",
+
+            clubPosition: "Chủ tịch CLB",
+
+            companyPosition: "Tổng Giám đốc",
+
+            companyName: "ABC Corporation",
+
+            fullNameColor: "#1f4b89",
+
+            clubPositionColor: "#333333",
+
+            companyPositionColor: "#333333",
+
+            companyNameColor: "#333333",
+
+            fullNameSize: 18,
+
+            clubPositionSize: 15,
+
+            companyPositionSize: 15,
+
+            companyNameSize: 15
+          },
+
+          {
+            avatar: "/images/member1.png",
 
             avatarSize: 80,
 
@@ -972,7 +1163,505 @@ export const puckConfig = {
     },
 
     render: (props) => <Components3 {...props} />
-    }
+    },
+
+    componentHeader: {
+      label: 'Header',
+
+      fields: {
+        logo: {
+          type: 'text',
+          label: 'Logo URL'
+        },
+
+        title: {
+          type: 'text',
+          label: 'Dòng tiêu đề',
+          contentEditable: true
+        },
+
+        subtitle: {
+          type: 'text',
+          label: 'Dòng phụ',
+          contentEditable: true
+        },
+
+        menu1: {
+          type: 'text',
+          label: 'Menu 1',
+          contentEditable: true
+        },
+
+        menu2: {
+          type: 'text',
+          label: 'Menu 2',
+          contentEditable: true
+        },
+
+        menu3: {
+          type: 'text',
+          label: 'Menu 3',
+          contentEditable: true
+        },
+
+        menu4: {
+          type: 'text',
+          label: 'Menu 4',
+          contentEditable: true
+        },
+
+        menu5: {
+          type: 'text',
+          label: 'Menu 5',
+          contentEditable: true
+        },
+
+        menu6: {
+          type: 'text',
+          label: 'Menu 6',
+          contentEditable: true
+        },
+
+        viText: {
+          type: 'text',
+          label: 'Nút Tiếng Việt',
+          contentEditable: true
+        },
+
+        enText: {
+          type: 'text',
+          label: 'Nút English',
+          contentEditable: true
+        },
+
+        backgroundColor: {
+          type: 'text',
+          label: 'Màu nền'
+        },
+
+        textColor: {
+          type: 'text',
+          label: 'Màu tiêu đề'
+        },
+
+        menuColor: {
+          type: 'text',
+          label: 'Màu menu'
+        },
+
+        buttonColor: {
+          type: 'text',
+          label: 'Màu nút'
+        },
+
+        buttonTextColor: {
+          type: 'text',
+          label: 'Màu chữ nút'
+        },
+
+        height: {
+          type: 'number',
+          label: 'Chiều cao Header',
+          min: 60,
+          max: 300
+        }
+      },
+
+      defaultProps: {
+        logo: '/images/logoDT.png',
+
+        title: 'CLB DOANH NHÂN ĐỒNG THÁP',
+        subtitle: 'Tại TP.Hồ Chí Minh',
+
+        menu1: 'Trang chủ',
+        menu2: 'Giới thiệu',
+        menu3: 'Hội viên',
+        menu4: 'Hoạt động ban',
+        menu5: 'Tin tức & sự kiện',
+        menu6: 'Liên hệ',
+
+        viText: 'VI',
+        enText: 'EN',
+
+        backgroundColor: '#ffffff',
+
+        textColor: '#1f4b89',
+
+        menuColor: '#1f4b89',
+
+        buttonColor: '#1f4b89',
+
+        buttonTextColor: '#ffffff',
+
+        height: 90
+      },
+
+      render: (props) => <ComponentHeader {...props} />
+    },
+
+    componentCarousel: {
+      label: 'Carousel Hình Ảnh',
+
+      fields: {
+        title: {
+          type: 'text',
+          label: 'Tiêu đề',
+          contentEditable: true
+        },
+
+
+        backgroundColor: {
+          type: 'text',
+          label: 'Màu nền'
+        },
+
+        titleColor: {
+          type: 'text',
+          label: 'Màu tiêu đề'
+        },
+
+        titleSize: {
+          type: 'number',
+          label: 'Cỡ chữ tiêu đề',
+          min: 20,
+          max: 100
+        },
+
+
+        speed: {
+          type: 'number',
+          label: 'Tốc độ slide',
+          min: 5,
+          max: 120
+        },
+
+        images: {
+          type: 'array',
+          label: 'Danh sách ảnh',
+
+          arrayFields: {
+            src: {
+              type: 'text',
+              label: 'URL ảnh'
+            },
+
+            alt: {
+              type: 'text',
+              label: 'Alt Text',
+              contentEditable: true
+            }
+          },
+
+          getItemSummary: (item) =>
+            item.alt || item.src || 'Ảnh'
+        }
+      },
+
+      defaultProps: {
+        title: 'HỘI VIÊN CLB DOANH NHÂN ĐỒNG THÁP TẠI TP. HỒ CHÍ MINH',
+
+        backgroundColor: '#b5cff8',
+
+        titleColor: '#001431',
+
+        titleSize: 36,
+
+        speed: 30,
+
+        images: [
+          {
+            src: '/images/logoHH.png',
+            alt: 'Hoạt động 1'
+          },
+          {
+            src: '/images/logoHH1.png',
+            alt: 'Hoạt động 2'
+          },
+          {
+            src: '/images/logoHH2.jpg',
+            alt: 'Hoạt động 3'
+          },
+          {
+            src: '/images/logoEB.png',
+            alt: 'Hoạt động 4'
+          },
+          {
+            src: '/images/logoComoon.png',
+            alt: 'Hoạt động 5'
+          }
+        ]
+      },
+
+      render: (props) => (
+        <ComponentCarousel {...props} />
+      )
+    },
+
+    componentFooter: {
+      label: 'Footer',
+
+      fields: {
+        backgroundColor: {
+          type: 'text',
+          label: 'Màu nền'
+        },
+
+        textColor: {
+          type: 'text',
+          label: 'Màu chữ'
+        },
+
+        linkColor: {
+          type: 'text',
+          label: 'Màu link'
+        },
+
+        logo: {
+          type: 'text',
+          label: 'Logo URL'
+        },
+
+        title: {
+          type: 'text',
+          label: 'Tiêu đề',
+          contentEditable: true
+        },
+
+        subtitle: {
+          type: 'text',
+          label: 'Dòng phụ',
+          contentEditable: true
+        },
+
+        description1: {
+          type: 'textarea',
+          label: 'Nội dung 1',
+          contentEditable: true
+        },
+
+        description2: {
+          type: 'textarea',
+          label: 'Nội dung 2',
+          contentEditable: true
+        },
+
+        description3: {
+          type: 'textarea',
+          label: 'Nội dung 3',
+          contentEditable: true
+        },
+
+        // CỘT 2
+
+        column2Title: {
+          type: 'text',
+          label: 'Tiêu đề cột 2',
+          contentEditable: true
+        },
+
+        homeLink: {
+          type: 'text',
+          label: 'Link Trang chủ'
+        },
+
+        newsLink: {
+          type: 'text',
+          label: 'Link Tin tức'
+        },
+
+        aboutLink: {
+          type: 'text',
+          label: 'Link Về chúng tôi'
+        },
+
+        activityLink: {
+          type: 'text',
+          label: 'Link Lĩnh vực hoạt động'
+        },
+
+        memberLink: {
+          type: 'text',
+          label: 'Link Hội viên'
+        },
+
+        registerLink: {
+          type: 'text',
+          label: 'Link Đăng ký'
+        },
+
+        boardLink: {
+          type: 'text',
+          label: 'Link Hoạt động ban'
+        },
+
+        // CỘT 3
+
+        column3Title: {
+          type: 'text',
+          label: 'Tiêu đề cột 3',
+          contentEditable: true
+        },
+
+        myhLink: {
+          type: 'text',
+          label: 'Link MYH'
+        },
+
+        mycLink: {
+          type: 'text',
+          label: 'Link MYC'
+        },
+
+        hhfLink: {
+          type: 'text',
+          label: 'Link HHF'
+        },
+
+        hheLink: {
+          type: 'text',
+          label: 'Link HHE'
+        },
+
+        hhaLink: {
+          type: 'text',
+          label: 'Link HHA'
+        },
+
+        coweLink: {
+          type: 'text',
+          label: 'Link COWE'
+        },
+
+        hhnLink: {
+          type: 'text',
+          label: 'Link HHN'
+        },
+
+        hyvLink: {
+          type: 'text',
+          label: 'Link HYV'
+        },
+
+        // COPYRIGHT
+
+        copyright: {
+          type: 'text',
+          label: 'Copyright',
+          contentEditable: true
+        },
+
+        // FACEBOOK
+
+        facebookIcon: {
+          type: 'text',
+          label: 'Facebook Icon'
+        },
+
+        facebookUrl: {
+          type: 'text',
+          label: 'Facebook URL'
+        },
+
+        // TIKTOK
+
+        tiktokIcon: {
+          type: 'text',
+          label: 'TikTok Icon'
+        },
+
+        tiktokUrl: {
+          type: 'text',
+          label: 'TikTok URL'
+        },
+
+        // YOUTUBE
+
+        youtubeIcon: {
+          type: 'text',
+          label: 'Youtube Icon'
+        },
+
+        youtubeUrl: {
+          type: 'text',
+          label: 'Youtube URL'
+        }
+      },
+
+      defaultProps: {
+        backgroundColor: '#ffffff',
+
+        textColor: '#000000',
+
+        linkColor: '#000000',
+
+        logo: '/images/logoDT.png',
+
+        title: 'CLB DOANH NHÂN ĐỒNG THÁP',
+
+        subtitle: 'TẠI THÀNH PHỐ HỒ CHÍ MINH',
+
+        description1:
+          'Kết nối cộng đồng doanh nhân Đồng Tháp.',
+
+        description2:
+          'Thúc đẩy hợp tác và phát triển bền vững.',
+
+        description3:
+          'Lan tỏa giá trị Đất Sen Hồng.',
+
+        column2Title: 'Liên kết trang',
+
+        homeLink: '/',
+
+        newsLink: '/tin-tuc',
+
+        aboutLink: '/gioi-thieu',
+
+        activityLink: '/linh-vuc-hoat-dong',
+
+        memberLink: '/hoi-vien',
+
+        registerLink: '/dang-ky',
+
+        boardLink: '/hoat-dong-ban',
+
+        column3Title: 'Khác',
+
+        myhLink: '#',
+        mycLink: '#',
+        hhfLink: '#',
+        hheLink: '#',
+        hhaLink: '#',
+        coweLink: '#',
+        hhnLink: '#',
+        hyvLink: '#',
+
+        copyright:
+          '© 2026 CLB Doanh Nhân Đồng Tháp tại TP.HCM. All Rights Reserved.',
+
+        facebookIcon:
+          '/images/logoFB.png',
+
+        facebookUrl:
+          'https://facebook.com',
+
+        tiktokIcon:
+          '/images/logoTT.png',
+
+        tiktokUrl:
+          'https://tiktok.com',
+
+        youtubeIcon:
+          '/images/logoYTB.png',
+
+        youtubeUrl:
+          'https://youtube.com'
+      },
+
+      render: (props) => (
+        <ComponentFooter {...props} />
+      )
+    },
 
   },
 
@@ -983,7 +1672,10 @@ export const puckConfig = {
     { title: 'Nâng cao', components: ['Hero'] },
     { title: 'Sen Hồng ', components: ['Components1']},
     { title: 'Chuyên Môn', components: ['Components2']},
-    { title: 'Cơ cấu tổ chức', components: ['Components3']}
+    { title: 'Cơ cấu tổ chức', components: ['Components3']},
+    { title: 'Header', components: ['componentHeader']},
+    { title: 'Carousel', components: ['componentCarousel']},
+    { title: 'Footer', components: ['componentFooter']},
 
   ],
 

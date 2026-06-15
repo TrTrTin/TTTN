@@ -50,6 +50,13 @@ const Components1 = (props) => {
   };
 
   return (
+    <div
+      style={{
+        minHeight: '600px'
+      }}
+    >
+
+    
     <AdminSection
       container="2xl"
       padding_x={0}
@@ -61,23 +68,24 @@ const Components1 = (props) => {
     >
 
       
-      <div
-        className={`
-          relative z-10 flex items-start pt-24
-          ${positionClass[positionX]}
-        `}
-        style={{
-          paddingLeft: `${paddingLeft}px`,
-          paddingTop: `${paddingTop}px`
-        }}
-      >
+        <div
+          className={`
+            relative z-10 flex items-center
+            ${positionClass[positionX]}
+          `}
+          style={{
+            minHeight: '600px',
+            paddingLeft: `${paddingLeft}px`,
+            paddingTop: '200px'
+          }}
+        >
 
         {/* CARD */}
         <div
           style={{
             width: `${cardWidth ?? 420}px`,
             height: `${cardHeight ?? 280}px`,
-            padding: `${cardPadding ?? 28}px`,
+            padding: `${cardPadding ?? 40}px`,
             backgroundColor: `rgba(255,255,255,${cardBgOpacity ?? 0.12})`,
             backdropFilter: `blur(${cardBlur ?? 16}px)`,
 
@@ -146,6 +154,9 @@ const Components1 = (props) => {
       </div>
 
     </AdminSection>
+    
+
+    </div>
   );
 };
 

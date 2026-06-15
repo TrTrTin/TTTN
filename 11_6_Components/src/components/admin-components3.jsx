@@ -9,30 +9,43 @@ gradientTo,
 cards = []
 }) => {
 return (
-<AdminSection
-background={{
-type: "gradient",
-fromColor: gradientFrom,
-toColor: gradientTo,
-direction: "to bottom right"
-}}
-padding="30px 20px"
-> <div
-  style={{
-    maxWidth: "1100px",
-    margin: "0 auto"
-  }}
->
+<div
+      style={{
+        minHeight: '600px'
+      }}
+    >
 
+<AdminSection
+  background={{
+    type: "gradient",
+    fromColor: gradientFrom,
+    toColor: gradientTo,
+    direction: "to bottom right"
+  }}
+  padding="60px 20px"
+>
+  <div
+    style={{
+      minHeight: "600px",
+      display: "flex",
+      alignItems: "center"
+    }}
+  >
+    <div
+      style={{
+        maxWidth: "1280px",
+        width: "100%",
+        margin: "0 auto"
+      }}
+    >
    
   
     {/* CARDS */}
     <div
       style={{
         display: "grid",
-        gridTemplateColumns:
-"repeat(auto-fit,minmax(380px,1fr))",
-        gap: "30px"
+        gridTemplateColumns: "repeat(auto-fit,minmax(480px,1fr))",
+        gap: "50px"
       }}
     >
       {cards.map((card, index) => (
@@ -46,12 +59,12 @@ padding="30px 20px"
               `${card.cardRadius || 20}px`,
 
             padding:
-              `${card.cardPadding || 30}px`,
+              `${card.cardPadding || 50}px`,
 
             boxShadow:
               "0 10px 25px rgba(0,0,0,0.08)",
 
-            minHeight: "auto"
+            minHeight: "420px"
           }}
         >
           {/* TITLE */}
@@ -61,7 +74,7 @@ padding="30px 20px"
                 card.titleColor || "#1f4b89",
 
               fontSize:
-                `${card.titleSize || 30}px`,
+                `${card.titleSize || 36}px`,
 
               fontWeight: 700,
 
@@ -79,7 +92,7 @@ padding="30px 20px"
                   card.contentColor || "#333",
 
                 fontSize:
-                  `${card.contentSize || 16}px`,
+                  `${card.contentSize || 18}px`,
 
                 marginBottom: "20px"
               }}
@@ -133,10 +146,10 @@ padding="30px 20px"
                         }
                         style={{
                           width:
-                            `${member.avatarSize || 80}px`,
+                            `${member.avatarSize || 100}px`,
 
                           height:
-                            `${member.avatarSize || 80}px`,
+                            `${member.avatarSize || 100}px`,
 
                           borderRadius:
                             "50%",
@@ -157,7 +170,7 @@ padding="30px 20px"
                               "#1f4b89",
 
                             fontSize:
-                              `${member.fullNameSize || 18}px`,
+                              `${member.fullNameSize || 20}px`,
 
                             fontWeight:
                               700,
@@ -178,7 +191,7 @@ padding="30px 20px"
                               "#333",
 
                             fontSize:
-                              `${member.clubPositionSize || 15}px`
+                              `${member.clubPositionSize || 17}px`
                           }}
                         >
                           {
@@ -193,7 +206,7 @@ padding="30px 20px"
                               "#333",
 
                             fontSize:
-                              `${member.companyPositionSize || 15}px`
+                              `${member.companyPositionSize || 17}px`
                           }}
                         >
                           {
@@ -208,7 +221,7 @@ padding="30px 20px"
                               "#333",
 
                             fontSize:
-                              `${member.companyNameSize || 15}px`
+                              `${member.companyNameSize || 17}px`
                           }}
                         >
                           {
@@ -226,11 +239,12 @@ padding="30px 20px"
         </div>
       ))}
     </div>
-
+      
+      </div>
   </div>
 </AdminSection>
 
-
+</div>
 );
 };
 
