@@ -1459,40 +1459,22 @@ export const puckConfig = {
           contentEditable: true
         },
 
-        homeLink: {
-          type: 'text',
-          label: 'Link Trang chủ'
-        },
+        column2Links: {
+  type: "array",
+  label: "Menu cột 2",
+  arrayFields: {
+    text: {
+      type: "text",
+      label: "Tên",
+      contentEditable: true
+    },
+    url: {
+      type: "text",
+      label: "Link"
+    }
+  }
+},
 
-        newsLink: {
-          type: 'text',
-          label: 'Link Tin tức'
-        },
-
-        aboutLink: {
-          type: 'text',
-          label: 'Link Về chúng tôi'
-        },
-
-        activityLink: {
-          type: 'text',
-          label: 'Link Lĩnh vực hoạt động'
-        },
-
-        memberLink: {
-          type: 'text',
-          label: 'Link Hội viên'
-        },
-
-        registerLink: {
-          type: 'text',
-          label: 'Link Đăng ký'
-        },
-
-        boardLink: {
-          type: 'text',
-          label: 'Link Hoạt động ban'
-        },
 
         // CỘT 3
 
@@ -1502,45 +1484,21 @@ export const puckConfig = {
           contentEditable: true
         },
 
-        myhLink: {
-          type: 'text',
-          label: 'Link MYH'
-        },
-
-        mycLink: {
-          type: 'text',
-          label: 'Link MYC'
-        },
-
-        hhfLink: {
-          type: 'text',
-          label: 'Link HHF'
-        },
-
-        hheLink: {
-          type: 'text',
-          label: 'Link HHE'
-        },
-
-        hhaLink: {
-          type: 'text',
-          label: 'Link HHA'
-        },
-
-        coweLink: {
-          type: 'text',
-          label: 'Link COWE'
-        },
-
-        hhnLink: {
-          type: 'text',
-          label: 'Link HHN'
-        },
-
-        hyvLink: {
-          type: 'text',
-          label: 'Link HYV'
-        },
+        column3Links: {
+  type: "array",
+  label: "Menu cột 3",
+  arrayFields: {
+    text: {
+      type: "text",
+      label: "Tên",
+      contentEditable: true
+    },
+    url: {
+      type: "text",
+      label: "Link"
+    }
+  }
+},
 
         // COPYRIGHT
 
@@ -1611,31 +1569,50 @@ export const puckConfig = {
 
         column2Title: 'Liên kết trang',
 
-        homeLink: '/',
+        column2Links: [
+  {
+    text: "Trang chủ",
+    url: "/"
+  },
+  {
+    text: "Tin tức và sự kiện",
+    url: "/tin-tuc"
+  },
+  {
+    text: "Về chúng tôi",
+    url: "/gioi-thieu"
+  },
+  {
+    text: "Các lĩnh vực hoạt động",
+    url: "/linh-vuc-hoat-dong"
+  },
+  {
+    text: "Doanh nghiệp hội viên",
+    url: "/hoi-vien"
+  },
+  {
+    text: "Đăng ký",
+    url: "/dang-ky"
+  },
+  {
+    text: "Hoạt động ban",
+    url: "/hoat-dong-ban"
+  }
+],
 
-        newsLink: '/tin-tuc',
-
-        aboutLink: '/gioi-thieu',
-
-        activityLink: '/linh-vuc-hoat-dong',
-
-        memberLink: '/hoi-vien',
-
-        registerLink: '/dang-ky',
-
-        boardLink: '/hoat-dong-ban',
 
         column3Title: 'Khác',
 
-        myhLink: '#',
-        mycLink: '#',
-        hhfLink: '#',
-        hheLink: '#',
-        hhaLink: '#',
-        coweLink: '#',
-        hhnLink: '#',
-        hyvLink: '#',
-
+        column3Links: [
+  { text: "MYH", url: "#" },
+  { text: "MYC", url: "#" },
+  { text: "HHF", url: "#" },
+  { text: "HHE", url: "#" },
+  { text: "HHA", url: "#" },
+  { text: "COWE", url: "#" },
+  { text: "HHN", url: "#" },
+  { text: "HYV", url: "#" }
+],
         copyright:
           '© 2026 CLB Doanh Nhân Đồng Tháp tại TP.HCM. All Rights Reserved.',
 

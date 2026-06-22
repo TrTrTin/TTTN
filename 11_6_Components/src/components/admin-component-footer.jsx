@@ -14,26 +14,12 @@ const ComponentFooter = ({
   description3,
 
   column2Title,
-
-  homeLink,
-  newsLink,
-  aboutLink,
-  activityLink,
-  memberLink,
-  registerLink,
-  boardLink,
+  column2Links = [],
 
   column3Title,
+  column3Links = [],
 
-  myhLink,
-  mycLink,
-  hhfLink,
-  hheLink,
-  hhaLink,
-  coweLink,
-  hhnLink,
-  hyvLink,
-
+  
   copyright,
 
   facebookIcon,
@@ -157,43 +143,17 @@ const ComponentFooter = ({
               gap: "12px"
             }}
           >
-            <a
-                href={homeLink}
-                onMouseEnter={() => setHoveredLink("home")}
+            {column2Links.map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                onMouseEnter={() => setHoveredLink(`c2-${index}`)}
                 onMouseLeave={() => setHoveredLink(null)}
-                style={linkStyle("home")}
-                >
-                Trang chủ
-                </a>
-
-            <a
-                href={newsLink}
-                onMouseEnter={() => setHoveredLink("news")}
-                onMouseLeave={() => setHoveredLink(null)}
-                style={linkStyle("news")}
-                >
-                Tin tức và sự kiện
-                </a>
-
-            <a href={aboutLink} style={{ color: linkColor }}>
-              Về chúng tôi
-            </a>
-
-            <a href={activityLink} style={{ color: linkColor }}>
-              Các lĩnh vực hoạt động
-            </a>
-
-            <a href={memberLink} style={{ color: linkColor }}>
-              Doanh nghiệp hội viên
-            </a>
-
-            <a href={registerLink} style={{ color: linkColor }}>
-              Đăng ký
-            </a>
-
-            <a href={boardLink} style={{ color: linkColor }}>
-              Hoạt động ban
-            </a>
+                style={linkStyle(`c2-${index}`)}
+              >
+                {item.text}
+              </a>
+            ))}
           </div>
         </div>
 
@@ -217,14 +177,17 @@ const ComponentFooter = ({
               gap: "12px"
             }}
           >
-            <a href={myhLink} style={{ color: linkColor }}>MYH</a>
-            <a href={mycLink} style={{ color: linkColor }}>MYC</a>
-            <a href={hhfLink} style={{ color: linkColor }}>HHF</a>
-            <a href={hheLink} style={{ color: linkColor }}>HHE</a>
-            <a href={hhaLink} style={{ color: linkColor }}>HHA</a>
-            <a href={coweLink} style={{ color: linkColor }}>COWE</a>
-            <a href={hhnLink} style={{ color: linkColor }}>HHN</a>
-            <a href={hyvLink} style={{ color: linkColor }}>HYV</a>
+            {column3Links.map((item, index) => (
+              <a
+                key={index}
+                href={item.url}
+                onMouseEnter={() => setHoveredLink(`c3-${index}`)}
+                onMouseLeave={() => setHoveredLink(null)}
+                style={linkStyle(`c3-${index}`)}
+              >
+                {item.text}
+              </a>
+            ))}
           </div>
         </div>
       </div>
