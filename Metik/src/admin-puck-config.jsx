@@ -5,6 +5,7 @@ import NewProduct from './components/new-product';
 import GioiThieu from './components/gioithieu';
 import VeChungToi from './components/vechungtoi';
 import KhachHang from './components/khachhang';
+import Footer from './components/footer';
 
 
 
@@ -557,6 +558,109 @@ export const puckConfig = {
 
         },
 
+        Footer: {
+            label: "Footer",
+
+            fields: {
+
+                logo: {
+                    type: "text",
+                    label: "Logo URL",
+                },
+
+                description: {
+                    type: "textarea",
+                    label: "Description",
+                },
+
+                title: {
+                    type: "text",
+                    label: "Title",
+                },
+
+                phone: {
+                    type: "text",
+                    label: "Phone",
+                },
+
+                email: {
+                    type: "text",
+                    label: "Email",
+                },
+
+                address: {
+                    type: "textarea",
+                    label: "Address",
+                },
+
+                copyright: {
+                    type: "text",
+                    label: "Copyright",
+                },
+
+                backgroundTop: {
+                    type: "text",
+                    label: "Top Background",
+                },
+
+                backgroundBottom: {
+                    type: "text",
+                    label: "Bottom Background",
+                },
+
+                titleColor: {
+                    type: "text",
+                    label: "Title Color",
+                },
+
+                textColor: {
+                    type: "text",
+                    label: "Text Color",
+                },
+
+                bottomTextColor: {
+                    type: "text",
+                    label: "Bottom Text Color",
+                },
+
+            },
+
+            defaultProps: {
+
+                logo: "/public/images/logometik.png.webp",
+
+                description:
+                    "METIK - một thế giới snack dành cho những ai yêu sự giòn giòn ngất ngây, hương vị trẻ trung, đầy cảm hứng để mỗi ngày đều căng tràn sức sống.",
+
+                title: "THÔNG TIN LIÊN HỆ",
+
+                phone: "(+84) 79 721 3333",
+
+                email: "sale@ochao.vn",
+
+                address: " Lô C3-1, Đường D2-N7, KCN Tân Phú Trung, Xã Củ Chi, TP.HCM..",
+
+                copyright:
+                    "Copyright 2026 © METIK. All Rights Reserved.",
+
+                backgroundTop: "#ffbf1e",
+
+                backgroundBottom: "#e67e22",
+
+                titleColor: "#2e7d32",
+
+                textColor: "#111111",
+
+                bottomTextColor: "#ffffff",
+
+            },
+
+            render: (props) => (
+                <Footer {...props} />
+            ),
+
+        },
+
     },
 
 
@@ -569,6 +673,7 @@ export const puckConfig = {
         { title: 'Gioithieu', components: ['Gioithieu'] },
         { title: 'Vechungtoi', components: ['Vechungtoi'] },
         { title: 'Khachhang', components: ['khachhang'] },
+        { title: 'Footer', components: ['Footer'] },
 
 
     ],
