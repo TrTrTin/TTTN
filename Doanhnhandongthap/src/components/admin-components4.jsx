@@ -1,5 +1,5 @@
 import React from "react";
-
+import AnimatedCounter from "./animated-counter";
 const Components4 = ({
   title,
   titleColor,
@@ -13,7 +13,7 @@ const Components4 = ({
   return (
     <div
       style={{
-        background: "transparent",
+        background: "linear-gradient(to bottom right,#d9f4ff,#f5d4ff)",
         padding: "60px 40px"
       }}
     >
@@ -54,7 +54,7 @@ const Components4 = ({
                 color: card.valueColor
               }}
             >
-              {card.value}
+              <AnimatedCounter value={card.value} />
             </div>
 
             {/* dòng dưới */}

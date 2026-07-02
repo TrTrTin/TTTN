@@ -1,5 +1,5 @@
 import React from "react";
-
+import AnimatedCounter from "./animated-counter";
 const ComponentsHoiVien = ({
   title,
   titleColor,
@@ -180,7 +180,7 @@ const ComponentsHoiVien = ({
                 fontSize: `${valueSize}px`
               }}
             >
-              {item.value}
+              <AnimatedCounter value={item.value} />
             </div>
 
             <div

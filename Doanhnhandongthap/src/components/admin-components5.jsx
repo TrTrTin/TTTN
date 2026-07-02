@@ -64,7 +64,7 @@ const Components5 = ({
         flexDirection: "column",
         alignItems: "center",
         gap: "30px",
-        background: "transparent"
+        background: "linear-gradient(to bottom right,#d9f4ff,#f5d4ff)",
       }}
     >
       {/* Hàng 1 */}

@@ -833,9 +833,9 @@ export const puckConfig = {
 
     subtitleSize: 18,
 
-    gradientFrom: "#f5f7ff",
+    gradientFrom: "#d9f4ff",
 
-    gradientTo: "#eef4ff",
+    gradientTo: "#f5d4ff",
 
     cards: [
 
@@ -887,17 +887,17 @@ export const puckConfig = {
 
         members: [
           {
-            avatar: "/images/member1.png",
+            avatar: "/images/member1.webp",
 
             avatarSize: 80,
 
-            fullName: "Nguyễn Văn A",
+            fullName: "Trần Văn Khang",
 
             clubPosition: "Chủ tịch CLB",
 
-            companyPosition: "Tổng Giám đốc",
+            companyPosition: "Chủ tịch HĐQT",
 
-            companyName: "ABC Corporation",
+            companyName: "Công ty CP đầu tư Sen Vàng",
 
             fullNameColor: "#1f4b89",
 
@@ -917,17 +917,17 @@ export const puckConfig = {
           },
 
           {
-            avatar: "/images/member1.png",
+            avatar: "/images/member3.jpg",
 
             avatarSize: 80,
 
-            fullName: "Nguyễn Văn A",
+            fullName: "Lê Thị Ngọc Anh",
 
-            clubPosition: "Chủ tịch CLB",
+            clubPosition: "Trưởng ban Truyền thông",
 
-            companyPosition: "Tổng Giám đốc",
+            companyPosition: "Giám đốc Tài chính",
 
-            companyName: "ABC Corporation",
+            companyName: "Công ty TNHH May mặc Đồng Tháp",
 
             fullNameColor: "#1f4b89",
 
@@ -947,17 +947,17 @@ export const puckConfig = {
           },
 
           {
-            avatar: "/images/member1.png",
+            avatar: "/images/member4.jpg",
 
             avatarSize: 80,
 
-            fullName: "Nguyễn Văn A",
+            fullName: "Nguyễn Thị Mai",
 
-            clubPosition: "Chủ tịch CLB",
+            clubPosition: "Ủy viên BCH",
 
-            companyPosition: "Tổng Giám đốc",
+            companyPosition: "Giám đốc phát triển",
 
-            companyName: "ABC Corporation",
+            companyName: "Công ty TNHH XYZ Group",
 
             fullNameColor: "#1f4b89",
 
@@ -1365,7 +1365,7 @@ export const puckConfig = {
       },
 
       defaultProps: {
-        backgroundColor: '#ffffff',
+        backgroundColor: "linear-gradient(to bottom right,#d9f4ff,#f5d4ff)",
 
         textColor: '#000000',
 
@@ -1503,7 +1503,7 @@ export const puckConfig = {
             value: {
               type: "text",
               label: "Dòng trên",
-              contentEditable: true
+              
             },
 
             label: {
@@ -1907,7 +1907,7 @@ export const puckConfig = {
             value:{
               type:"text",
               label:"Giá trị",
-              contentEditable:true,
+              
             },
 
             label:{
@@ -2063,7 +2063,7 @@ export const puckConfig = {
             value:{
               type:"text",
               label:"Giá trị",
-              contentEditable:true,
+              
             },
 
             label:{
@@ -2177,9 +2177,8 @@ export const puckConfig = {
 
   ],
 
-
-  // git test
   
+
 
   // Root config
   root: {
