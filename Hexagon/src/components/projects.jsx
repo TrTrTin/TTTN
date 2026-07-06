@@ -110,13 +110,18 @@ export default function Projects({ onCreate, onEdit, onOpen }) {
 
             <div className="col-span-2">
               <span
-                className={`inline-flex rounded-full px-3 py-1 text-sm font-semibold ${(project.language || "VI") === "EN"
-                  ? "bg-blue-100 text-blue-700"
-                  : "bg-green-100 text-green-700"
-                  }`}
-              >
-                {project.language || "VI"}
-              </span>
+  className={`inline-flex rounded-full px-3 py-1 text-sm font-semibold
+    ${
+      project.language === "EN"
+        ? "bg-blue-100 text-blue-700"
+        : project.language === "MIX"
+        ? "bg-orange-100 text-orange-700"
+        : "bg-green-100 text-green-700" 
+    }
+  `}
+>
+  {project.language || "VI"}
+</span>
             </div>
 
             {/* Date */}

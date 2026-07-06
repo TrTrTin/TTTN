@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Footer({
-
+  language = "VI",
   // =========================
   // Top Background
   // =========================
@@ -76,7 +76,9 @@ export default function Footer({
 
   return (
 
-    <footer className="w-full">
+    <footer 
+    lang={language?.toLowerCase()}
+    className="w-full">
 
       {/* ======================================
                     TOP

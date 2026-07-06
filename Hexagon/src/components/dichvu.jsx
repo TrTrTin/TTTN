@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 export default function DichVu({
+    // Language
+    language = "VI",
     // Background
     backgroundFrom,
     backgroundTo,
@@ -39,6 +41,7 @@ export default function DichVu({
 
     return (
         <section
+            lang={language?.toLowerCase()}
             className="w-full"
             style={{
                 background: `linear-gradient(to right, ${backgroundFrom}, ${backgroundTo})`,

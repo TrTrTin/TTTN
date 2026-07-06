@@ -33,6 +33,34 @@ function emptyContent() {
   };
 }
 
+function cloneContentWithLanguage(content, language) {
+  const cloned =
+    typeof structuredClone === "function"
+      ? structuredClone(content)
+      : JSON.parse(JSON.stringify(content));
+
+  // MIX không phải ngôn ngữ của component
+  if (language === "MIX") {
+    return cloned;
+  }
+
+  cloned.content = (cloned.content || []).map((block) => {
+    if (!block.props?.language) {
+      return block;
+    }
+
+    return {
+      ...block,
+      props: {
+        ...block.props,
+        language,
+      },
+    };
+  });
+
+  return cloned;
+}
+
 /* =========================
    GET
 ========================= */
@@ -50,6 +78,12 @@ export function getProjectByTranslation(groupId, language) {
     (p) =>
       p.translationGroup === groupId &&
       p.language === language
+  );
+}
+
+export function getTranslations(groupId) {
+  return load().filter(
+    (p) => p.translationGroup === groupId
   );
 }
 
@@ -185,7 +219,13 @@ export function createTranslation(id, targetLanguage = null) {
 
   const language =
     targetLanguage ??
-    (original.language === "VI" ? "EN" : "VI");
+    (
+      original.language === "VI"
+        ? "EN"
+        : original.language === "EN"
+          ? "MIX"
+          : "VI"
+    );
 
   const existed = projects.find(
     (p) =>
@@ -211,9 +251,10 @@ export function createTranslation(id, targetLanguage = null) {
     createdAt: now(),
     updatedAt: now(),
 
-    content: structuredClone
-      ? structuredClone(original.content)
-      : JSON.parse(JSON.stringify(original.content)),
+    content: cloneContentWithLanguage(
+      original.content,
+      language
+    ),
   };
 
   projects.push(translated);
@@ -240,3 +281,5 @@ export function updateProjectLanguage(id, language) {
 
   return projects[index];
 }
+
+

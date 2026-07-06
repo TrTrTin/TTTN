@@ -1,6 +1,9 @@
 import React from "react";
 
 export default function GioiThieu({
+    // Language
+    language = "VI",
+
     // Background
     backgroundFrom,
     backgroundTo,
@@ -51,6 +54,7 @@ export default function GioiThieu({
 }) {
     return (
         <section
+            lang={language?.toLowerCase()}
             className="w-full"
             style={{
                 background: `linear-gradient(to right, ${backgroundFrom}, ${backgroundTo})`,
@@ -95,7 +99,7 @@ export default function GioiThieu({
                         <div
                             className="
                                 absolute
-                                left-100
+                                right-4
                                 bottom-2
                                 w-56
                                 rounded-[10px]

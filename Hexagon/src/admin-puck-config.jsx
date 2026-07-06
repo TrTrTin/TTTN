@@ -9,13 +9,18 @@ import Footer from './components/footer';
 
 export function createPuckConfig(options = {}) {
     const FLAGS = {
-        VI: "🇻🇳",
-        EN: "EN",
+        VI: "/images/VI_icon.webp",
+        EN: "/images/EN_icon.svg",
+        MIX: "/images/MIX_icon.jpg",
     };
     const {
-        project = null,
-        language = "VI",
-        onChangeLanguage = () => { },
+
+        project,
+
+        translations = [],
+
+        onChangeLanguage,
+
     } = options;
 
     return {
@@ -24,6 +29,21 @@ export function createPuckConfig(options = {}) {
                 label: "Header",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
+
                     logo: {
                         type: "text",
                         label: "Logo URL",
@@ -95,6 +115,8 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
+
                     logo: "/images/logo.png",
 
                     logoLink: "#",
@@ -137,14 +159,16 @@ export function createPuckConfig(options = {}) {
 
                 render: (props) => (
                     <Header
-
-                        key={`${project?.id}-${language}`}
+                        key={`${project?.id}-${props.language}`}
                         {...props}
+                        language={project?.language || props.language}
                         projectId={project?.id}
-                        language={language}
-                        flag={FLAGS[language]}
                         translationGroup={project?.translationGroup}
+                        translations={translations}
                         onChangeLanguage={onChangeLanguage}
+                        viFlag={FLAGS.VI}
+                        enFlag={FLAGS.EN}
+                        mixFlag={FLAGS.MIX}
                     />
                 ),
             },
@@ -153,12 +177,27 @@ export function createPuckConfig(options = {}) {
                 label: "Trang Chủ",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
+
                     // Background
 
                     backgroundHeight: {
-    type: "number",
-    label: "Background Height",
-},
+                        type: "number",
+                        label: "Background Height",
+                    },
 
                     backgroundFrom: {
                         type: "text",
@@ -356,6 +395,8 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
+
                     backgroundHeight: 900,
                     backgroundFrom: "#135439",
                     backgroundTo: "#41b57d",
@@ -436,6 +477,20 @@ export function createPuckConfig(options = {}) {
                 label: "Giới Thiệu",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
 
                     // =========================
                     // Background
@@ -614,6 +669,7 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
 
                     // Background
 
@@ -705,6 +761,20 @@ export function createPuckConfig(options = {}) {
                 label: "Dịch Vụ",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
 
                     // =========================
                     // Background
@@ -863,6 +933,7 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
 
                     // Background
 
@@ -982,6 +1053,20 @@ export function createPuckConfig(options = {}) {
                 label: "Tin Tức",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
 
                     // =========================
                     // Background
@@ -1317,6 +1402,7 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
 
                     backgroundFrom: "#ffffff",
                     backgroundTo: "#ffffff",
@@ -1435,6 +1521,20 @@ export function createPuckConfig(options = {}) {
                 label: "Carousel Animation",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
 
                     // =========================
                     // Background
@@ -1545,6 +1645,7 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
 
                     // =========================
                     // Background
@@ -1633,6 +1734,20 @@ export function createPuckConfig(options = {}) {
                 label: "Footer",
 
                 fields: {
+                    language: {
+                        type: "select",
+                        label: "Language",
+                        options: [
+                            {
+                                label: "Vietnamese",
+                                value: "VI",
+                            },
+                            {
+                                label: "English",
+                                value: "EN",
+                            },
+                        ],
+                    },
 
                     // =========================
                     // Top Background
@@ -1842,6 +1957,7 @@ export function createPuckConfig(options = {}) {
                 },
 
                 defaultProps: {
+                    language: "VI",
 
                     // =========================
                     // Background

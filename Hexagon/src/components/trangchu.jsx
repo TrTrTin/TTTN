@@ -2,8 +2,11 @@ import React from "react";
 import TypewriterAnimation from "./animation";
 
 export default function TrangChu({
+    // Language
+    language = "VI",
+
     // Background
-    backgroundFrom ,
+    backgroundFrom,
     backgroundTo,
     backgroundHeight,
 
@@ -53,6 +56,7 @@ export default function TrangChu({
 }) {
     return (
         <section
+            lang={language?.toLowerCase()}
             className="w-full"
             style={{
                 background: `linear-gradient(to bottom right, ${backgroundFrom}, ${backgroundTo})`,
@@ -180,12 +184,12 @@ export default function TrangChu({
 
                                             fontWeight: 600,
                                         }}
-                                         onMouseEnter={(e) => {
-        e.currentTarget.style.filter = "brightness(1.25)";
-    }}
-    onMouseLeave={(e) => {
-        e.currentTarget.style.filter = "brightness(1)";
-    }}
+                                        onMouseEnter={(e) => {
+                                            e.currentTarget.style.filter = "brightness(1.25)";
+                                        }}
+                                        onMouseLeave={(e) => {
+                                            e.currentTarget.style.filter = "brightness(1)";
+                                        }}
                                     >
                                         {button.text}
                                     </a>

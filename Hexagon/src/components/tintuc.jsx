@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 export default function TinTuc({
+    language = "VI",
 
     // ===========================
     // Background
@@ -97,7 +98,7 @@ export default function TinTuc({
     return (
 
         <section
-
+            lang={language?.toLowerCase()}
             className="w-full"
 
             style={{

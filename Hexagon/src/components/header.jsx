@@ -17,8 +17,16 @@ export default function Header({
 
   showLanguageSwitcher,
 
-  language,
+  language = "VI",
+
+  translations = [],
+
   onChangeLanguage = () => { },
+
+  viFlag,
+  enFlag,
+  mixFlag,
+
 }) {
 
 
@@ -119,7 +127,11 @@ export default function Header({
           {showLanguageSwitcher && (
             <LanguageSwitcher
               language={language}
+              translations={translations}
               onChangeLanguage={onChangeLanguage}
+              viFlag={viFlag}
+              enFlag={enFlag}
+              mixFlag={mixFlag}
             />
           )}
         </div>
@@ -167,7 +179,11 @@ export default function Header({
           <div className="mt-5 flex justify-center">
             <LanguageSwitcher
               language={language}
+              translations={translations}
               onChangeLanguage={onChangeLanguage}
+              viFlag={viFlag}
+              enFlag={enFlag}
+              mixFlag={mixFlag}
             />
           </div>
         )}

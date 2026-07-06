@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 
 export default function CarouselAnimation({
-
+    language = "VI",
     // =========================
     // Background
     // =========================
@@ -91,7 +91,7 @@ export default function CarouselAnimation({
             </style>
 
             <section
-
+                lang={language?.toLowerCase()}
                 style={{
 
                     background: `linear-gradient(to bottom, ${backgroundFrom}, ${backgroundTo})`,

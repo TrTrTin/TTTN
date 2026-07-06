@@ -22,13 +22,38 @@ function normalize(content) {
   };
 }
 
+function detectProjectLanguage(content) {
+  const blocks = content?.content || [];
+
+  const languages = [];
+
+  for (const block of blocks) {
+    const lang = block.props?.language;
+
+    // Component chưa hỗ trợ language thì bỏ qua
+    if (!lang) continue;
+
+    languages.push(lang);
+  }
+
+  if (languages.length === 0) {
+    return "VI";
+  }
+
+  const unique = [...new Set(languages)];
+
+  return unique.length === 1
+    ? unique[0]
+    : "MIX";
+}
+
 export default function Editor({
   projectId,
   onPublish,
 }) {
   const [project, setProject] = useState(null);
   const [data, setData] = useState(EMPTY);
-  const [language, setLanguage] = useState("VI");
+
 
   const publishing = useRef(false);
 
@@ -45,7 +70,7 @@ export default function Editor({
 
     setProject(currentProject);
 
-    setLanguage(currentProject.language || "VI");
+
 
     setData(
       normalize(currentProject.content)
@@ -59,13 +84,9 @@ export default function Editor({
   const config = useMemo(() => {
     return createPuckConfig({
       project,
-      language,
-
-      // Chỉ để Header biết cờ nào đang active.
-      // Chưa xử lý đổi ngôn ngữ trong Editor.
-      onChangeLanguage: () => {},
+      onChangeLanguage: () => { },
     });
-  }, [project, language]);
+  }, [project]);
 
   /* =========================
      PUBLISH
@@ -77,9 +98,11 @@ export default function Editor({
 
     publishing.current = true;
 
+    const normalized = normalize(newData);
+
     const updated = updateProject(project.id, {
-      language,
-      content: normalize(newData),
+      language: detectProjectLanguage(normalized),
+      content: normalized,
     });
 
     if (updated) {
