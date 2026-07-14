@@ -1,0 +1,754 @@
+```css
+
+/* ==========================================
+   GLOBAL
+========================================== */
+:root {
+    --header-height: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    padding-top: var(--header-height);
+}
+
+.background img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+
+
+.header {
+    min-height: 70px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8a008f;
+    z-index: 999;
+
+}
+
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo-img {
+    width: clamp(130px, 18vw, 270px);
+    height: auto;
+    width: auto;
+
+}
+
+
+/* ==========================================
+   HEADER ICON
+========================================== */
+
+
+.home-icon,
+.facebook-icon,
+.login-btn {
+    height: 42px;
+    height: 34px;
+    width: auto;
+
+}
+
+
+/* ==========================================
+   BANNER OVERLAY
+========================================== */
+
+.banner-overlay {
+    top: 70px;
+    z-index: 999;
+    width: 100%;
+    pointer-events: none;
+}
+
+.banner-image-1 {
+    width: 100%;
+    max-width: 420px;
+    margin-top: -8%;
+}
+
+.banner-image-2 {
+    width: 100%;
+    max-width: 600px;
+    margin-top: -5%;
+}
+
+
+.banner-image-3 {
+    width: 90%;
+    max-width: 1400px;
+    margin-top: 8%;
+}
+
+
+/* ==========================================
+   MENU OVERLAY
+========================================== */
+
+.menu-overlay {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: min(90%, 1100px);
+    z-index: 1000;
+
+    pointer-events: auto;
+}
+
+/* Nhóm trái */
+.menu-left {
+    padding-top: 10%;
+    gap: clamp(8px, 2vw, 18px);
+}
+
+
+
+
+/* Nhóm phải */
+.menu-right {
+    padding-top: 10%;
+    gap: clamp(8px, 2vw, 18px);
+}
+
+/* Link */
+.menu-overlay a {
+    display: inline-block;
+}
+
+/* Ảnh */
+.menu-item {
+    height: clamp(42px, 6vw, 80px);
+    width: auto;
+    transition: transform .25s ease;
+}
+
+/* Ảnh giữa */
+.menu-center-item {
+    height: clamp(90px, 14vw, 200px);
+}
+
+/* Hover */
+.menu-overlay a:hover .menu-item {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   BANNER BOTTOM
+========================================== */
+
+#dang-ky-du-thi {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.banner-bottom-img {
+    width: 100%;
+    max-width: 500px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+}
+
+
+/* ==========================================
+   CONTEST FORM
+========================================== */
+
+.col-lg-6 {
+    display: flex;
+}
+
+.contest-form {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+    width: min(90%, 1300px);
+    z-index: 999;
+}
+
+/* ==========================
+   LEFT
+========================== */
+
+.contest-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+
+.main-image-box {
+    width: 100%;
+}
+
+.contest-main-img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    display: block;
+}
+
+.contest-sub-img {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================
+   RIGHT
+========================== */
+
+.contest-right {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    gap: 0px;
+}
+
+/* ==========================
+   PLAYER INFO
+========================== */
+
+.player-info {
+    font-family: Arial, sans-serif;
+}
+
+.info-title p {
+    margin-bottom: 6px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.info-content p {
+    margin-bottom: 6px;
+    color: #ffd949;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ==========================
+   GENDER
+========================== */
+
+.gender-select {
+    font-family: Arial, sans-serif;
+}
+
+.gender-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.gender-select input[type="radio"] {
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+/* ==========================
+   INPUT
+========================== */
+.input-box {
+
+    position: relative;
+
+    width: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+}
+
+.input-title {
+
+    position: absolute;
+
+    left: 18px;
+
+    top: 8px;
+
+    z-index: 2;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    color: #8a008f;
+
+    pointer-events: none;
+
+}
+
+.input-field {
+
+    position: absolute;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 10px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    color: #8a008f;
+
+    width: calc(100% - 36px);
+
+}
+
+.input-field:focus {
+
+    outline: none;
+
+}
+
+.textarea-field {
+
+    resize: none;
+
+    height: 55px;
+
+}
+
+.input-group-custom {
+    position: relative;
+}
+
+.input-group-custom label {
+    position: absolute;
+    left: 16px;
+    top: -8px;
+    padding: 0 8px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #8a008f;
+    z-index: 2;
+}
+
+.custom-input {
+    height: 52px;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: #8a008f;
+
+
+    background-color: transparent;
+
+    box-shadow: none;
+}
+
+.custom-input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.textarea-input {
+    height: 110px;
+    resize: none;
+    padding-top: 18px;
+}
+
+.input-address {
+    background-image: url("../../assets/images/boxtext.png");
+    height: 50px;
+}
+
+.input-phone {
+    background-image: url("../../assets/images/boxtextngan.png");
+    height: 50px;
+}
+
+.input-area {
+    background-image: url("../../assets/images/boxtextngan.png");
+    height: 50px;
+}
+
+.input-introduce {
+    background-image: url("../../assets/images/boxtextbu.png");
+    height: 90px;
+}
+
+.input-video {
+    background-image: url("../../assets/images/boxtext.png");
+    height: 50px;
+}
+
+/* ==========================
+   CCCD
+========================== */
+
+.cccd-title {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.cccd-img {
+    width: 100%;
+    transition: .25s;
+}
+
+.cccd-img:hover {
+    transform: scale(1.03);
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.submit-btn {
+    width: 100%;
+    transition: .25s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.header a img {
+    transition: transform .25s ease;
+}
+
+.header a:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.modal-content {
+    background: transparent;
+    box-shadow: none;
+}
+
+.popup-image {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+
+.modal-backdrop.show {
+    opacity: .8;
+}
+
+/* ==========================================
+   AGREE POPUP
+========================================== */
+
+.agree-popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.agree-popup .popup-image {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+}
+
+.agree-popup-text {
+    position: absolute;
+
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    font-size: clamp(22px, 2.5vw, 40px);
+    font-weight: bold;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, .6),
+        0 0 12px rgba(138, 0, 143, .8);
+
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:1200px) {
+
+    .contest-form {
+        width: 95%;
+    }
+
+    .info-title p,
+    .info-content p {
+        font-size: 18px;
+    }
+
+    .gender-img {
+        height: 38px;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+
+    .menu-overlay {
+        width: 90%;
+    }
+
+    .menu-left,
+    .menu-right {
+        gap: 12px;
+    }
+
+
+    .contest-form {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-top: 80px;
+        width: 95%;
+    }
+
+    .contest-left {
+        margin-bottom: 40px;
+    }
+
+    .contest-right {
+        gap: 18px;
+    }
+
+    .info-title p,
+    .info-content p {
+        font-size: 18px;
+    }
+
+    .custom-input {
+        height: 48px;
+    }
+
+    .textarea-input {
+        height: 100px;
+    }
+
+    .popup-image {
+        max-width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+
+
+    .header {
+
+        min-height: 60px;
+    }
+
+    .background {
+
+        padding-top: 60px;
+    }
+
+    .menu-overlay {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 18px;
+
+        top: 78%;
+    }
+
+    .menu-left,
+    .menu-right {
+
+        width: 100%;
+
+        justify-content: center;
+
+        padding-top: 0;
+    }
+
+    .menu-center {
+
+        order: -1;
+
+        margin: 0;
+    }
+
+
+    .contest-form {
+        margin-top: 60px;
+    }
+
+    .player-info {
+        width: 100%;
+    }
+
+    .info-title p,
+    .info-content p {
+        font-size: 16px;
+    }
+
+    .gender-select .d-flex {
+        flex-wrap: wrap;
+        gap: 16px !important;
+    }
+
+    .gender-img {
+        height: 34px;
+    }
+
+    .custom-input {
+        height: 44px;
+        font-size: 10px;
+    }
+
+    .textarea-input {
+        height: 90px;
+    }
+
+    .cccd-title {
+        font-size: 14px;
+    }
+
+    @media (max-width:576px) {
+
+        .contest-form {
+            width: 96%;
+            margin-top: 40px;
+        }
+
+        .info-title p,
+        .info-content p {
+            font-size: 14px;
+        }
+
+        .gender-img {
+            height: 30px;
+        }
+
+        .input-group-custom label {
+            font-size: 11px;
+        }
+
+        .custom-input {
+            height: 42px;
+            padding: 12px;
+            font-size: 10px;
+        }
+
+        .textarea-input {
+            height: 80px;
+        }
+
+        .cccd-title {
+            font-size: 13px;
+        }
+
+        .contest-button .col-6 {
+            margin-bottom: 10px;
+        }
+
+        .popup-image {
+            max-width: 95%;
+        }
+
+        .btn-close {
+            transform: scale(1);
+        }
+
+    }
+
+}
+
+```

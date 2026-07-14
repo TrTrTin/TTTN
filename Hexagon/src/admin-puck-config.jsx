@@ -12,6 +12,7 @@ export function createPuckConfig(options = {}) {
         VI: "/images/VI_icon.webp",
         EN: "/images/EN_icon.svg",
         MIX: "/images/MIX_icon.jpg",
+        
     };
     const {
 
