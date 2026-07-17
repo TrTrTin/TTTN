@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>votting</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/votting.css">
+</head>
+
+<body>
+
+    <!-- Hero -->
+    <section class="hero position-relative">
+
+        <!-- Background -->
+        <div class="background">
+            <img src="../assets/images/BGTRANGVOTING.png" alt="Background" class="img-fluid w-100">
+        </div>
+
+
+        <!-- Header -->
+        <header class="header position-absolute top-0 start-0 w-100">
+
+            <div class="container-fluid px-lg-5 px-md-4 px-3">
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <!-- Left -->
+                    <div class="header-left">
+
+                        <a href="#danh-sach-thi-sinh">
+                            <img src="../assets/images/iconapp.png" alt="Logo" class="logo-img">
+                        </a>
+
+                    </div>
+
+                    <!-- Right -->
+                    <div class="header-right d-flex align-items-center gap-3">
+
+                        <a href="./index.html">
+                            <img src="../assets/images/home.png" alt="Home" class="home-icon">
+                        </a>
+
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="../assets/images/facebook.png" alt="Facebook" class="facebook-icon">
+                        </a>
+
+                        <a href="./login.html">
+                            <img src="../assets/images/đn.png" alt="Đăng nhập" class="login-btn">
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- Banner Overlay -->
+        <div class="banner-overlay position-absolute start-50 translate-middle-x">
+
+            <!-- logo-haokhi -->
+            <div class="text-center">
+                <img src="../assets/images/Logo-HaoKhiDuHiep.png" alt="Banner 1" class="img-fluid banner-image-1">
+            </div>
+
+            <!-- Image text -->
+            <div class="text-center mt-3">
+                <img src="../assets/images/text.png" alt="Banner 2" class="img-fluid banner-image-2">
+            </div>
+
+            <!-- khung dau trang -->
+            <div class="text-center mt-3">
+                <img src="../assets/images/khungdautrang.png" alt="Banner 2" class="img-fluid banner-image-3">
+            </div>
+
+
+            <!-- Menu Overlay -->
+            <div
+                class="menu-overlay d-flex flex-lg-nowrap flex-wrap justify-content-center justify-content-lg-between align-items-center">
+                <!-- Nhóm trái -->
+                <div class="menu-left d-flex justify-content-center align-items-center gap-2 gap-lg-3">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#ruleModal">
+                        <img src="../assets/images/thele.png" alt="Menu 1" class="menu-item">
+                    </a>
+
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#guideModal">
+                        <img src="../assets/images/hd.png" alt="Menu 2" class="menu-item">
+                    </a>
+                </div>
+
+                <!-- Nhóm giữa -->
+                <div class="menu-center">
+                    <a href="#danh-sach-thi-sinh">
+                        <img src="../assets/images/votengay.png" alt="Menu Center" class="menu-item menu-center-item">
+                    </a>
+                </div>
+
+                <!-- Nhóm phải -->
+                <div class="menu-right d-flex align-items-center gap-3">
+                    <a href="./page3.html">
+                        <img src="../assets/images/taigame.png" alt="Menu 3" class="menu-item">
+                    </a>
+
+                    <a href="./page4.html">
+                        <img src="../assets/images/napthe.png" alt="Menu 4" class="menu-item">
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="hero-content">
+            <!-- danh sach thi sinh-->
+            <section id="danh-sach-thi-sinh"
+                class="banner-bottom text-center position-absolute start-50 translate-middle-x">
+                <img src="../assets/images/danhsachthisinh.png" alt="Banner Bottom" class="img-fluid banner-bottom-img">
+            </section>
+
+
+            <!-- ==========================================
+            FILTER BAR
+            ========================================== -->
+            <section class="filter-section container-fluid">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12">
+
+                        <div
+                            class="filter-wrapper d-flex flex-lg-nowrap flex-wrap justify-content-between align-items-center">
+
+                            <!-- ===== LEFT ===== -->
+                            <div class="filter-left d-flex flex-lg-nowrap flex-wrap align-items-center">
+
+                                <!-- Box 1 -->
+                                <button class="filter-box filter-select border-0">
+
+                                    <span>Sắp xếp</span>
+
+                                    <img src="../assets/images/arrow-down.png" class="filter-arrow" alt="arrow">
+
+                                </button>
+
+                                <!-- Box 2 -->
+                                <button class="filter-box filter-select border-0">
+
+                                    <span>Chọn giới tính</span>
+
+                                    <img src="../assets/images/arrow-down.png" class="filter-arrow" alt="arrow">
+
+                                </button>
+
+                                <!-- Box 3 -->
+                                <button class="filter-box filter-select border-0">
+
+                                    <span>Chọn máy chủ</span>
+
+                                    <img src="../assets/images/arrow-down.png" class="filter-arrow" alt="arrow">
+
+                                </button>
+
+                            </div>
+
+                            <!-- ===== RIGHT ===== -->
+
+                            <div class="filter-search">
+
+                                <div class="search-box">
+
+                                    <input type="text" placeholder="Tìm kiếm nhân vật">
+
+                                    <button>
+
+                                        <img src="../assets/images/search.png" alt="Search">
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- ==========================================
+            CONTESTANT LIST
+            ========================================== -->
+            <section class="contest-section container-fluid">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12">
+
+                        <!-- ======================
+                        CARD GRID
+                        ====================== -->
+                        <div class="contest-grid row g-4">
+                            <div class="contest-grid row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                <!-- CARD -->
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#contestDetailModal">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+                                <div class="col">
+                                    <a href="#" class="contest-card text-decoration-none">
+
+                                        <!-- Background -->
+                                        <img src="../assets/images/card.png" alt="Card Background" class="card-bg">
+
+                                        <!-- Content -->
+                                        <div class="contest-card-content">
+
+                                            <!-- Top -->
+                                            <div class="card-top d-flex justify-content-between align-items-center">
+
+                                                <div class="card-top-left d-flex align-items-center">
+                                                    <img src="../assets/images/xephang.png" alt="">
+                                                    <span>999</span>
+                                                </div>
+
+                                                <div class="card-top-right d-flex align-items-center">
+                                                    <span>999</span>
+                                                    <img src="../assets/images/hoa.png" alt="">
+                                                </div>
+
+                                            </div>
+
+                                            <!-- Name -->
+                                            <div class="card-name">
+                                                Tên thí sinh -SBD 1234
+                                            </div>
+
+                                            <!-- Server -->
+                                            <div class="card-server">
+                                                Sever 01 - Lý Bạch
+                                            </div>
+
+                                        </div>
+
+                                    </a>
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+                        <!-- ======================
+                    PAGINATION
+                ====================== -->
+                        <div class="pagination-wrapper d-flex justify-content-center flex-wrap">
+
+                            <a href="#" class="page-btn">Đầu</a>
+
+                            <a href="#" class="page-btn">Trang trước</a>
+
+                            <a href="#" class="page-btn active">1</a>
+
+                            <a href="#" class="page-btn">2</a>
+
+                            <a href="#" class="page-btn">3</a>
+
+                            <a href="#" class="page-btn">Trang sau</a>
+
+                            <a href="#" class="page-btn">Cuối</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- tich luy moc qua-->
+            <section id="tich-luy-doi-qua"
+                class="banner-tichluy text-center position-absolute start-50 translate-middle-x">
+                <img src="../assets/images/tichluymocdoiqua.png" alt="Banner Bottom"
+                    class="img-fluid banner-bottom-img">
+            </section>
+
+
+            <!-- ==========================================
+            MỐC TÍCH LŨY
+            ========================================== -->
+            <section id="moc-tich-luy" class="container-fluid">
+
+                <!-- Title -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="reward-title">
+                            ĐÃ TÍCH LŨY
+                            <span>0</span>
+                            HOA
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- Progress -->
+                <div class="row justify-content-center">
+
+                    <div class="col-12">
+
+                        <div class="progress-wrapper">
+
+                            <!-- Thanh -->
+                            <img src="../assets/images/thanh.png" class="img-fluid progress-bar-img"
+                                alt="Thanh tích lũy">
+
+                            <!-- 4 mốc -->
+                            <div class="progress-points">
+
+                                <!-- Item -->
+                                <div class="reward-item">
+
+                                    <div class="point">
+
+                                        <img src="../assets/images/hoa 2.png" class="point-img" alt="">
+
+                                        <div class="point-text">
+                                            50 Hoa
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reward-box">
+
+                                        <img src="../assets/images/boxitem.png" class="reward-img" alt="">
+
+                                        <a href="./qua1.html" class="reward-btn reward-btn-1"></a>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Item -->
+                                <div class="reward-item">
+
+                                    <div class="point">
+
+                                        <img src="../assets/images/hoa 2.png" class="point-img" alt="">
+
+                                        <div class="point-text">
+                                            150 Hoa
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reward-box">
+
+                                        <img src="../assets/images/boxitem.png" class="reward-img" alt="">
+
+                                        <a href="./qua1.html" class="reward-btn reward-btn-2"></a>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Item -->
+                                <div class="reward-item">
+
+                                    <div class="point">
+
+                                        <img src="../assets/images/hoa 2.png" class="point-img" alt="">
+
+                                        <div class="point-text">
+                                            500 Hoa
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reward-box">
+
+                                        <img src="../assets/images/boxitem.png" class="reward-img" alt="">
+
+                                        <a href="./qua1.html" class="reward-btn reward-btn-3"></a>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Item -->
+                                <div class="reward-item">
+
+                                    <div class="point">
+
+                                        <img src="../assets/images/hoa 2.png" class="point-img" alt="">
+
+                                        <div class="point-text">
+                                            1000 Hoa
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reward-box">
+
+                                        <img src="../assets/images/boxitem.png" class="reward-img" alt="">
+
+                                        <a href="./qua1.html" class="reward-btn reward-btn-4"></a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==========================================
+            Bang xep hang
+            ========================================== -->
+            <section id="bxh" class="banner-bxh text-center position-absolute start-50 translate-middle-x">
+                <img src="../assets/images/bxh.png" alt="Banner Bottom" class="img-fluid banner-bottom-img">
+            </section>
+
+
+            <!-- ==========================================
+            KHUNG BXH
+            ========================================== -->
+            <section id="khung-bxh" class="khung-bxh-section container-fluid">
+
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-lg-8">
+
+                        <div class="khung-bxh-wrapper position-relative w-100">
+
+                            <!-- Background khung -->
+                            <img src="../assets/images/khungbxh.png" alt="Khung BXH" class="khung-bxh-bg img-fluid w-100">
+
+                            <!-- Content -->
+                            <div class="khung-bxh-content position-absolute top-0 start-0 w-100 h-100 d-flex flex-column">
+
+                                <!-- ===== TOP: 3 thẻ tab ===== -->
+                                <div class="bxh-tabs d-flex justify-content-between mx-auto w-75">
+
+                                    <a href="#" class="bxh-tab bxh-tab-1 flex-fill"></a>
+                                    <a href="#" class="bxh-tab bxh-tab-2 flex-fill"></a>
+                                    <a href="#" class="bxh-tab bxh-tab-3 flex-fill"></a>
+
+                                </div>
+
+                                <!-- ===== BOTTOM: bảng xếp hạng ===== -->
+                                <div class="bxh-table-wrapper w-100">
+
+                                    <!-- Header -->
+                                    <div class="bxh-table-header d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col text-white">Hạng</div>
+                                        <div class="bxh-col text-white">Tên nhân vật</div>
+                                        <div class="bxh-col text-white">Máy chủ</div>
+                                        <div class="bxh-col text-white">Hoa nhận</div>
+                                    </div>
+
+                                    <!-- Row 1 -->
+                                    <div class="bxh-row d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col"><img src="../assets/images/hang1.png" alt="Hạng 1" class="rank-img"></div>
+                                        <div class="bxh-col text-white">Lục Trà Bạc Hà</div>
+                                        <div class="bxh-col text-white">S1 - Lý Bạch</div>
+                                        <div class="bxh-col text-white">9999.9999</div>
+                                    </div>
+
+                                    <!-- Row 2 -->
+                                    <div class="bxh-row d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col"><img src="../assets/images/hang2.png" alt="Hạng 2" class="rank-img"></div>
+                                        <div class="bxh-col text-white">Tên nhân vật</div>
+                                        <div class="bxh-col text-white">S1 - Lý Bạch</div>
+                                        <div class="bxh-col text-white">0000.0000</div>
+                                    </div>
+
+                                    <!-- Row 3 -->
+                                    <div class="bxh-row d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col"><img src="../assets/images/hang3.png" alt="Hạng 3" class="rank-img"></div>
+                                        <div class="bxh-col text-white">Tên nhân vật</div>
+                                        <div class="bxh-col text-white">S1 - Lý Bạch</div>
+                                        <div class="bxh-col text-white">0000.0000</div>
+                                    </div>
+
+                                    <!-- Row 4 -->
+                                    <div class="bxh-row d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col text-white">4</div>
+                                        <div class="bxh-col text-white">Tên nhân vật</div>
+                                        <div class="bxh-col text-white">S1 - Lý Bạch</div>
+                                        <div class="bxh-col text-white">0000.0000</div>
+                                    </div>
+
+                                    <!-- Row 5 -->
+                                    <div class="bxh-row d-flex justify-content-around align-items-center">
+                                        <div class="bxh-col text-white">5</div>
+                                        <div class="bxh-col text-white">Tên nhân vật</div>
+                                        <div class="bxh-col text-white">S1 - Lý Bạch</div>
+                                        <div class="bxh-col text-white">0000.0000</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            
+        </div>
+
+
+
+
+
+
+
+    </section>
+
+
+
+    <!-- ==========================
+     RULE MODAL
+    ========================== -->
+
+    <div class="modal fade" id="ruleModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content border-0 bg-transparent">
+
+                <img src="../assets/images/popup_thele.png" alt="Thể lệ" class="img-fluid popup-image"
+                    data-bs-dismiss="modal">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================
+     GUIDE MODAL
+    ========================== -->
+
+    <div class="modal fade" id="guideModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+
+            <div class="modal-content border-0 bg-transparent">
+
+                <img src="../assets/images/popup_huongdan.png" alt="Hướng dẫn" class="img-fluid popup-image"
+                    data-bs-dismiss="modal">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+     CONTEST DETAIL MODAL
+    ========================================== -->
+    <div class="modal fade" id="contestDetailModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content contest-popup">
+
+                <!-- background -->
+                <img src="../assets/images/pop up_thongtinthising.png"
+                    class="popup-bg"
+                    alt="">
+
+                <!-- close -->
+                <button
+                    class="popup-close border-0"
+                    data-bs-dismiss="modal">
+                    .
+                </button>
+
+                <div class="popup-wrapper container-fluid">
+
+                    <div class="row h-100">
+
+                        <!-- ===========================
+                            LEFT
+                        ============================ -->
+
+                        <div class="col-lg-6">
+
+                            <div class="popup-gallery">
+
+                                <!-- big -->
+                                <img
+                                    src="../assets/images/anhto.png"
+                                    class="popup-big-image">
+
+                                <!-- thumb -->
+
+                                <div class="row g-2 mt-2">
+
+                                    <div class="col-4">
+                                        <img src="../assets/images/anhnho1.png"
+                                            class="popup-thumb">
+                                    </div>
+
+                                    <div class="col-4">
+                                        <img src="../assets/images/anhnho2.png"
+                                            class="popup-thumb">
+                                    </div>
+
+                                    <div class="col-4">
+                                        <img src="../assets/images/anhnho3.png"
+                                            class="popup-thumb">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- ===========================
+                            RIGHT
+                        ============================ -->
+
+                        <div class="col-lg-6 d-flex flex-column">
+
+                            <!-- ======================
+                                INFO
+                            ======================= -->
+
+                            <div class="popup-info">
+
+                                <div class="info-row">
+                                    <span class="title">Nhân vật:</span>
+                                    <span class="value">Lục Trà Bạc Hà</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="title">SBD:</span>
+                                    <span class="value">01239</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="title">Bang hội:</span>
+                                    <span class="value">Lạc Viên</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="title">Máy chủ:</span>
+                                    <span class="value">S1 - Lý Bạch</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="title">Lời giới thiệu:</span>
+                                    <span class="value">
+                                        Xin chào...
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <!-- ======================
+                                FLOWER
+                            ======================= -->
+
+                            <div class="flower-box mt-3">
+
+                                <!-- row 1 -->
+
+                                <div class="flower-top">
+
+                                    <div class="flower-left">
+
+                                        <div class="flower-title">
+                                            Số hoa đã nhận
+                                        </div>
+
+                                        <div class="flower-number">
+
+                                            9999
+
+                                            <img src="../assets/images/hoa.png">
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="flower-right">
+
+                                        <div class="flower-title">
+
+                                            <img src="../assets/images/xephang.png">
+
+                                            Hạng
+
+                                        </div>
+
+                                        <div class="flower-number">
+                                            77
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- row2 -->
+
+                                <div class="gift-title">
+                                    Số hoa muốn tặng
+                                </div>
+
+                                <!-- row3 -->
+
+                                <div class="gift-row">
+
+                                    <div class="gift-input">
+
+                                        <button>-</button>
+
+                                        <span>10.000</span>
+
+                                        <button>+</button>
+
+                                    </div>
+
+                                    <button class="gift-max"></button>
+
+                                </div>
+
+                            </div>
+
+                            <!-- ======================
+                                BUTTON
+                            ======================= -->
+
+                            <div class="popup-buttons ">
+
+                                <a href="#" class="popup-btn popup-btn-1"></a>
+
+                                <a href="#" class="popup-btn popup-btn-2"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
