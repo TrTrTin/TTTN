@@ -1,0 +1,867 @@
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    overflow-x:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    outline:none;
+    border:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header{
+    position:relative;
+    z-index:999;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
+
+nav a{
+
+    color:#666;
+    font-size:22px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#ff7b00;
+    transform:translateY(-2px);
+
+}
+
+nav a.active{
+
+    color:#ff7b00;
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
+
+.login-btn{
+
+    position:relative;
+
+    width:160px;
+    height:45px;
+
+    background:none;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+.login-bg{
+
+    position:absolute;
+    inset:0;
+
+    background:url("../images/button_dangnhap.png") center/cover no-repeat;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover .login-bg{
+
+    background:url("../../assets/images/button_hover.png") center/cover no-repeat;
+
+}
+
+.login-text{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    z-index:2;
+
+    white-space:nowrap;
+
+}
+
+
+.coin-box{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    color:#11489d;
+    font-weight:700;
+    font-size:14px;
+
+}
+
+.coin-icon{
+
+    width:20px;
+    height:20px;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   BANNER
+========================================================== */
+
+.banner{
+
+    background:#001d5a;
+
+}
+
+.banner-content{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    border-radius:24px;
+    background:
+    linear-gradient(
+    135deg,
+    #041a53,
+    #163391);
+}
+
+.character{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.character img{
+
+    width:100%;
+    height:auto;
+
+}
+
+/* ==========================================================
+   HISTORY BUTTON
+========================================================== */
+
+.banner-text{
+
+    position:absolute;
+
+    right:60px;
+    bottom:40px;
+
+    z-index:5;
+
+}
+
+.history-btn{
+
+    width:280px;
+    height:52px;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:18px;
+    font-weight:500;
+
+    border:1px solid #79b2ff;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+.history-btn:hover{
+
+    background:#3559b3;
+
+    border-color:#3559b3;
+
+}
+
+/* ==========================================================
+   GAME SECTION
+========================================================== */
+
+.games{
+
+    position:relative;
+
+}
+
+.section-title{
+
+    color:#11489d;
+
+    font-size:40px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   SEARCH BOX
+========================================================== */
+
+.search-box{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    padding:12px 16px;
+
+    transition:.3s;
+
+}
+
+.search-box:hover{
+
+    border-color:#ff7b00;
+
+    box-shadow:0 0 12px rgba(255,123,0,.15);
+
+}
+
+.search-box i{
+
+    color:#999;
+
+}
+
+.search-box input{
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    min-width:220px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#999;
+
+}
+
+/* ==========================================================
+   CATEGORY
+========================================================== */
+
+.categories{
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+.category{
+
+    padding:18px 30px;
+
+    background:#fff;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.category:hover{
+
+    color:#ff7b00;
+
+    border-color:#ff7b00;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(255,123,0,.15);
+
+}
+
+.category.active{
+
+    background:#f7f7f7;
+
+}
+
+.category span{
+
+    margin-left:6px;
+
+    padding:3px 8px;
+
+    border-radius:20px;
+
+    background:#ddd;
+
+    font-size:13px;
+
+}
+
+/* ==========================================================
+   GAME GRID
+========================================================== */
+
+#gameGrid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+}
+
+.col-game{
+
+    width:20%;
+
+    padding:35px;
+
+}
+
+/* ==========================================================
+   GAME CARD
+========================================================== */
+
+.game-card{
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.game-card-img{
+
+    width:100%;
+
+    border-radius:24px;
+
+    transition:.35s;
+
+}
+
+.game-card:hover .game-card-img{
+
+    transform:scale(1.08);
+
+}
+
+.game-card h4{
+
+    margin-top:15px;
+
+    color:#333;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.game-card:hover h4{
+
+    color:#ff7b00;
+
+}
+
+/* ==========================================================
+   PAGINATION
+========================================================== */
+
+.pagination{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+}
+
+.pagination span{
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#bdbdbd;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.pagination span:hover{
+
+    transform:scale(1.25);
+
+}
+
+.pagination span.active{
+
+    background:#ff7b00;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#dddddd;
+
+    color:#666;
+
+}
+
+.footer-logo img{
+
+    width:120px;
+
+    margin:auto;
+
+}
+
+footer p{
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+footer strong{
+
+    color:#333;
+
+}
+
+
+/* ==========================================================
+   TOAST MESSAGE
+========================================================== */
+
+.toast-message{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    padding:14px 22px;
+
+    background:#11489d;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.3s;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.toast-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================
+   USER INFO
+========================================================== */
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:8px 14px;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    animation:fadeIn .35s ease;
+
+}
+
+.avatar{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#2bb7d6;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:20px;
+
+}
+
+.user-detail{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.username{
+
+    color:#ff6b00;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.userid{
+
+    color:#888;
+
+    font-size:11px;
+
+}
+
+.coin-box{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+    color:#11489d;
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
+
+
+/* ==========================================================
+   SCROLL ANIMATION
+========================================================== */
+
+.hidden-card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+
+        opacity .7s ease,
+
+        transform .7s ease;
+
+}
+
+.show-card{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+   (Bootstrap xử lý layout,
+    chỉ giữ lại phần custom)
+========================================================== */
+
+@media (max-width:991.98px){
+
+    .banner-content{
+
+        min-height:auto;
+
+        padding:40px 20px 90px;
+
+    }
+
+    .banner-text{
+
+        position:static;
+
+        margin-top:30px;
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .section-title{
+
+        font-size:34px;
+
+    }
+
+        .col-game{
+
+        width:33.3333%;
+
+    }
+
+
+}
+
+
+@media (max-width:767.98px){
+
+    .logo img{
+
+        height:50px;
+
+    }
+
+    .section-title{
+
+        font-size:28px;
+
+        text-align:center;
+
+        width:100%;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .search-box input{
+
+        min-width:0;
+
+        width:100%;
+
+    }
+
+    .history-btn{
+
+        width:100%;
+
+        max-width:280px;
+
+    }
+
+    .category{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .game-card h4{
+
+        font-size:14px;
+
+    }
+
+    footer{
+
+        font-size:14px;
+
+    }
+
+        .col-game{
+
+        width:50%;
+
+    }
+
+}
+
+
+@media (max-width:575.98px){
+
+    .banner{
+
+        padding:30px 0;
+
+    }
+
+    .banner-content{
+
+        border-radius:18px;
+
+    }
+
+    .character img{
+
+        width:100%;
+
+    }
+
+    .toast-message{
+
+        left:20px;
+
+        right:20px;
+
+        top:20px;
+
+        text-align:center;
+
+    }
+
+    .user-info{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        text-align:center;
+
+    }
+
+}

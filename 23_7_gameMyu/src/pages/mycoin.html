@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My coin</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/mycoin.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="bg-white shadow-sm">
+        <div class="container-fluid px-5 py-2">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="../assets/images/logo.png" alt="Logo">
+                </div>
+
+                <!-- Menu -->
+                <nav class="d-none d-lg-flex align-items-center gap-5">
+
+                    <a href="#">Trang Chủ</a>
+
+                    <a href="#">Trò Chơi</a>
+
+                    <a href="#" class="active">Nạp Game</a>
+
+                    <a href="#">Tin Tức</a>
+
+                    <a href="#">Hỗ Trợ</a>
+
+                </nav>
+
+                <!-- Login -->
+                <button class="login-btn">
+
+                    <div class="login-bg"></div>
+
+                    <span class="login-text">
+                        ĐĂNG NHẬP
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="banner py-5">
+
+        <div class="container">
+
+            <div class="banner-content rounded-4 overflow-hidden position-relative">
+
+                <div class="row align-items-center">
+
+                    <div class="col-lg-12">
+
+                        <div class="character text-center">
+
+                            <img src="../assets/images/Hero-banner.png" class="img-fluid" alt="Banner">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="banner-text">
+
+                    <button class="history-btn">
+
+                        Lịch sử giao dịch
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= USER INFO ================= -->
+
+    <section class="user-info-section py-4">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="user-info-card w-75">
+
+                <div class="row text-center g-4 align-items-center">
+
+                    <!-- Cột 1 -->
+                    <div class="col-12 col-md-4">
+
+                        <div class="info-title">
+                            Tài khoản
+                        </div>
+
+                        <div class="info-value">
+                            myepro01
+                        </div>
+
+                    </div>
+
+                    <!-- Cột 2 -->
+                    <div class="col-12 col-md-4">
+
+                        <div class="info-title">
+                            MyE ID
+                        </div>
+
+                        <div class="info-value">
+                            001234534
+                        </div>
+
+                    </div>
+
+                    <!-- Cột 3 -->
+                    <div class="col-12 col-md-4">
+
+                        <div class="info-title">
+                            Số dư
+                        </div>
+
+                        <div class="info-value d-flex justify-content-center align-items-center gap-2">
+
+                            <span>1200</span>
+
+                            <img src="../assets/images/coin_M.png"
+                                alt="Coin"
+                                class="coin-balance-icon">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PAYMENT METHOD ================= -->
+
+    <section class="payment-section py-5">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="payment-wrapper w-75">
+
+                <h2 class="payment-title mb-4">
+                    Chọn hình thức nạp
+                </h2>
+
+                <div class="row g-4">
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/Thanh_toan_truc_tiep.png" alt="">
+                            <p>Thanh toán trực tiếp</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/ZaloPay.png" alt="">
+                            <p>ZaloPay</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/MOMO.png" alt="">
+                            <p>Momo</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/ATM.png" alt="">
+                            <p>ATM Bannking</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/Visa.png" alt="">
+                            <p>Visa/Master</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/Tai_khoan_dinh_danh.png" alt="">
+                            <p>Tài khoản định danh(Bank VA)</p>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="payment-card">
+                            <img src="../assets/images/icon_qr.png" alt="">
+                            <p>QR Code</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PACKAGE ================= -->
+
+    <section class="package-section py-5">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="package-wrapper w-75">
+
+                <h2 class="package-title mb-4">
+                    chọn gói nạp
+                </h2>
+
+                <div class="row g-4">
+
+                    <!-- Card -->
+                    <div class="col-6 col-lg-3">
+
+                        <div class="package-card">
+
+                            <img src="../assets/images/20_MYE_COIN.png"
+                                alt=""
+                                class="package-img">
+
+                            <div class="package-content d-flex justify-content-between align-items-center">
+
+                                <div>
+
+                                    <div class="package-name">
+                                        20 MyE Coin
+                                    </div>
+
+                                    <div class="package-price">
+                                        20.000 VNĐ
+                                    </div>
+
+                                </div>
+
+                                <button class="buy-btn">
+                                    Mua
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Copy thêm 7 card nữa -->
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/50_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">50 MyE Coin</div>
+                                    <div class="package-price">50.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/100_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">100 MyE Coin</div>
+                                    <div class="package-price">100.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/500_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">500 MyE Coin</div>
+                                    <div class="package-price">500.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/1000_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">1000 MyE Coin</div>
+                                    <div class="package-price">1.000.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/2000_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">2000 MyE Coin</div>
+                                    <div class="package-price">2.000.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/5000_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">5000 MyE Coin</div>
+                                    <div class="package-price">5.000.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-lg-3">
+                        <div class="package-card">
+                            <img src="../assets/images/10000_MYE_COIN.png" class="package-img">
+                            <div class="package-content d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="package-name">10000 MyE Coin</div>
+                                    <div class="package-price">10.000.000 VNĐ</div>
+                                </div>
+                                <button class="buy-btn">Mua</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= GUIDE ================= -->
+
+    <section class="guide-section py-5">
+
+        <div class="container d-flex justify-content-center">
+
+            <div class="guide-wrapper w-75">
+
+                <!-- ================= TOP ================= -->
+
+                <div class="d-flex justify-content-center">
+                    <div class="guide-top">
+
+                    <div class="guide-inner">
+
+                        <h2 class="guide-title mb-4">
+                            HƯỚNG DẪN NẠP GAME
+                        </h2>
+
+                        <div class="row">
+
+                            <!-- LEFT -->
+
+                            <div class="col-lg-4">
+
+                                <div class="guide-item mb-4">
+
+                                    <div class="guide-number">1</div>
+
+                                    <div class="guide-text">
+                                        Chọn hình thức nạp phù hợp.
+                                    </div>
+
+                                </div>
+
+                                <div class="guide-item mb-4">
+
+                                    <div class="guide-number">2</div>
+
+                                    <div class="guide-text">
+                                        Chọn gói MyE Coin muốn nạp.
+                                    </div>
+
+                                </div>
+
+                                <div class="guide-item">
+
+                                    <div class="guide-number">3</div>
+
+                                    <div class="guide-text">
+                                        Thanh toán theo hướng dẫn.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- RIGHT -->
+
+                            <div class="col-lg-8 mt-4 mt-lg-0">
+
+                                <div class="guide-item mb-4">
+
+                                    <div class="guide-number">4</div>
+
+                                    <div class="guide-text">
+                                        MyE Coin sẽ được cộng vào tài khoàn ngay sau khi giao dịch thành công.
+                                    </div>
+
+                                </div>
+
+                                <div class="guide-item">
+
+                                    <div class="guide-number">5</div>
+
+                                    <div class="guide-text">
+
+                                        Sử dụng MyE Coin.
+
+                                        <ul class="guide-sublist mt-2">
+
+                                            <li>Đăng nhập vào app game.</li>
+
+                                            <li>Chọn mua vật phẩm mong muốn trong game.</li>
+
+                                            <li>MyE Coin sẽ được trừ ngay khi bấm xác nhận trong game.</li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="guide-note d-flex align-items-center mt-4">
+
+                            <img src="../assets/images/lock.png" alt="">
+
+                            <span>
+                                Giao dịch an toàn, bảo mật và được xử lý tự động 24/7.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+                
+
+                <!-- ================= BOTTOM ================= -->
+
+                <div class="guide-bottom position-relative mt-5">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+
+                            <div class="feature-item d-flex">
+
+                                <img src="../assets/images/antoan.png" alt="">
+
+                                <div>
+
+                                    <div class="feature-title">
+                                        An Toàn và bảo mật
+                                    </div>
+
+                                    <div class="feature-text">
+                                         Giao dịch được mã hoá, thông tin của bạn luôn được bảo vệ.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="feature-item d-flex">
+
+                                <img src="../assets/images/clock.png" alt="">
+
+                                <div>
+
+                                    <div class="feature-title">
+                                        Nạp tự động 24/7
+                                    </div>
+
+                                    <div class="feature-text">
+                                        Thanh toán thành công, MyE Coin
+                                        sẽ được cộng ngay vào tài khoản.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="feature-item d-flex">
+
+                                <img src="../assets/images/tainghe.png" alt="">
+
+                                <div>
+
+                                    <div class="feature-title">
+                                        Hỗ trợ nhanh chóng
+                                    </div>
+
+                                    <div class="feature-text">
+                                    Email: hotro@mye.vn<br>
+                                    Hotline: 0902 500 198                                    
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="guide-char">
+
+                <img src="../assets/images/girlMye.png" alt="">
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="py-5 text-center">
+
+        <div class="container">
+
+            <div class="footer-logo mb-3">
+
+                <img src="../assets/images/logo.png" alt="Logo">
+
+            </div>
+
+            <p>Email: hotro@mye.vn</p>
+
+            <p>Hotline: 0902 500 998</p>
+
+            <p>
+
+                <strong>CÔNG TY CỔ PHẦN MYE</strong>
+
+                <br>
+
+                Chịu trách nhiệm quản lý nội dung: Ông Lâm Trung Hiệp
+
+            </p>
+
+            <p>
+
+                Địa chỉ: 477/22 Âu Cơ, Phường Phú Trung,
+                Quận Tân Phú, TP Hồ Chí Minh
+
+            </p>
+
+            <p>
+
+                Giấy phép G1 số 297/GP-BTTTT
+                ngày 14/07/2020
+
+            </p>
+
+            <p>
+
+                Điều khoản dịch vụ |
+                Chính sách bảo mật
+
+            </p>
+
+            <p>
+
+                Copyright 2026 MYE.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+
+    <script src="../assets/js/napgame.js"></script>
+
+</body>
+
+</html>

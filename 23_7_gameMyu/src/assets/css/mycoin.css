@@ -1,0 +1,1205 @@
+
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f4f4;
+    overflow-x:hidden;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    outline:none;
+    border:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header{
+    position:relative;
+    z-index:999;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+}
+
+nav a{
+
+    color:#666;
+    font-size:22px;
+    font-weight:500;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#ff7b00;
+    transform:translateY(-2px);
+
+}
+
+nav a.active{
+
+    color:#ff7b00;
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   LOGIN BUTTON
+========================================================== */
+
+.login-btn{
+
+    position:relative;
+
+    width:160px;
+    height:45px;
+
+    background:none;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+}
+
+.login-bg{
+
+    position:absolute;
+    inset:0;
+
+    background:url("../images/button_dangnhap.png") center/cover no-repeat;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover .login-bg{
+
+    background:url("../../assets/images/button_hover.png") center/cover no-repeat;
+
+}
+
+.login-text{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    z-index:2;
+
+    white-space:nowrap;
+
+}
+
+
+.coin-box{
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    color:#11489d;
+    font-weight:700;
+    font-size:14px;
+
+}
+
+.coin-icon{
+
+    width:20px;
+    height:20px;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   BANNER
+========================================================== */
+
+.banner{
+
+    background:#001d5a;
+
+}
+
+.banner-content{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    border-radius:24px;
+    background:
+    linear-gradient(
+    135deg,
+    #041a53,
+    #163391);
+}
+
+.character{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.character img{
+
+    width:100%;
+    height:auto;
+
+}
+
+/* ==========================================================
+   HISTORY BUTTON
+========================================================== */
+
+.banner-text{
+
+    position:absolute;
+
+    right:60px;
+    bottom:40px;
+
+    z-index:5;
+
+}
+
+.history-btn{
+
+    width:280px;
+    height:52px;
+
+    background:transparent;
+
+    color:#fff;
+
+    font-size:18px;
+    font-weight:500;
+
+    border:1px solid #79b2ff;
+
+    border-radius:6px;
+
+    transition:.3s;
+
+}
+
+.history-btn:hover{
+
+    background:#3559b3;
+
+    border-color:#3559b3;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    background:#dddddd;
+
+    color:#666;
+
+}
+
+.footer-logo img{
+
+    width:120px;
+
+    margin:auto;
+
+}
+
+footer p{
+
+    margin-bottom:12px;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+}
+
+footer strong{
+
+    color:#333;
+
+}
+
+
+/* ==========================================================
+   TOAST MESSAGE
+========================================================== */
+
+.toast-message{
+
+    position:fixed;
+
+    top:30px;
+    right:30px;
+
+    padding:14px 22px;
+
+    background:#11489d;
+
+    color:#fff;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+    transition:.3s;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.toast-message.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ==========================================================
+   USER INFO
+========================================================== */
+
+.user-info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:8px 14px;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+    animation:fadeIn .35s ease;
+
+}
+
+.avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:#2bb7d6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+}
+
+.user-detail{
+    display:flex;
+    flex-direction:column;
+}
+
+.username{
+    color:#ff6b00;
+    font-size:14px;
+    font-weight:700;
+}
+
+.userid{
+    color:#888;
+    font-size:11px;
+}
+
+.coin-box{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    color:#11489d;
+    font-weight:700;
+    font-size:14px;
+}
+
+/* ==========================================================
+   USER INFO SECTION
+========================================================== */
+
+.user-info-section{
+    margin-top:20px;
+    position:relative;
+    z-index:10;
+}
+
+.w-75{
+    width:100%;
+}
+
+.user-info-card{
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+    padding:30px 20px;
+}
+
+.info-title{
+    color:#295396;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:14px;
+}
+
+.info-value{
+    color:#000;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:22px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+}
+
+.coin-balance-icon{
+
+    width:28px;
+
+    height:28px;
+
+    object-fit:contain;
+
+}
+
+/* ==========================================================
+   PAYMENT SECTION
+========================================================== */
+
+.payment-wrapper{
+    width:75%;
+}
+
+.payment-title{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#295396;
+
+}
+
+.payment-card{
+
+    background:#fff;
+
+    border:2px solid transparent;
+
+    border-radius:14px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    padding:28px 20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:16px;
+
+    height:100%;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.payment-card img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+}
+
+.payment-card p{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#000;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.payment-card:hover{
+
+    border-color:#ff7b00;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+
+    transform:translateY(-4px);
+
+}
+
+.payment-card:hover p{
+    color:#ff7b00;
+}
+
+/* ==========================================================
+   PACKAGE SECTION
+========================================================== */
+
+.package-wrapper{
+    width:75%;
+}
+
+.package-title{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    color:#295396;
+
+}
+
+.package-card{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    height:100%;
+
+}
+
+.package-card:hover{
+
+    box-shadow:0 0 18px rgba(255,123,0,.6);
+
+}
+
+.package-img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.package-content{
+
+    padding:16px;
+
+}
+
+.package-name{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#000;
+
+    margin-bottom:6px;
+
+}
+
+.package-price{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    color:#ff7b00;
+
+}
+
+.buy-btn{
+
+    background:#ff7b00;
+
+    color:#fff;
+
+    border:2px solid #ff7b00;
+
+    border-radius:10px;
+
+    box-shadow:0 4px 12px rgba(255,123,0,.35);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    padding:8px 18px;
+
+    transition:.3s;
+
+}
+
+.buy-btn:hover{
+
+    background:#fff;
+
+    color:#ff7b00;
+
+}
+
+/* Không cho hover button làm ảnh hưởng card */
+.package-card .buy-btn:hover{
+
+    transform:none;
+
+}
+
+/* ==========================================================
+   GUIDE
+========================================================== */
+
+.guide-wrapper{
+    position: relative;
+    width:75%;
+}
+
+.guide-top{
+    width: 85%;
+
+    background:#fff;
+
+    border-radius:14px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+}
+
+.guide-inner{
+
+    width:80%;
+
+    margin:auto;
+
+    padding:30px ;
+
+}
+
+.guide-title{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    color:#093a87;
+
+}
+
+.guide-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+}
+
+.guide-number{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#d7e5fc;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#093a87;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.guide-text{
+
+    font-family:Arial;
+
+    font-size:13px;
+
+    color:#000;
+
+    line-height:1.8;
+
+}
+
+.guide-sublist{
+
+    padding-left:18px;
+
+    margin-bottom:0;
+
+}
+
+.guide-sublist li{
+
+    margin-bottom:6px;
+
+}
+
+.guide-note{
+
+    gap:12px;
+
+}
+
+.guide-note img{
+
+    width:24px;
+
+}
+
+.guide-note span{
+
+    color:#093a87;
+
+    font-size:13px;
+
+    font-family:Arial;
+
+}
+
+/* ===================== */
+
+.guide-bottom{
+
+    background:#fff;
+
+    border-radius:14px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    padding:35px;
+
+    overflow:hidden;
+
+}
+
+.guide-char{
+
+    position:absolute;
+
+    right:-200px;
+
+    bottom:-10px;
+
+    z-index:5;
+
+    pointer-events:none;
+
+}
+
+.guide-char img{
+
+    width:260px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+.feature-item{
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.feature-item img{
+
+    width:52px;
+
+    flex-shrink:0;
+
+}
+
+.feature-title{
+
+    font-family:Arial;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    color:#093a87;
+
+}
+
+.feature-text{
+
+    font-family:Arial;
+
+    font-size:14px;
+
+    color:#000;
+
+}
+
+.guide-character{
+
+    position:absolute;
+
+    right:-20px;
+
+    bottom:0;
+
+    height:115%;
+
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+   (Bootstrap xử lý layout,
+    chỉ giữ lại phần custom)
+========================================================== */
+
+@media (max-width:991.98px){
+
+    .banner-content{
+        min-height:auto;
+        padding:40px 20px 90px;
+    }
+
+    .banner-text{
+        position:static;
+        margin-top:30px;
+        display:flex;
+        justify-content:center;
+    }
+
+    .section-title{
+        font-size:34px;
+    }
+
+
+     .w-80{
+        width:90%;
+    }
+
+    .user-info-card{
+        padding:25px 20px;
+    }
+
+    .payment-wrapper{
+
+        width:90%;
+
+    }
+
+    .payment-title{
+
+        font-size:34px;
+
+    }
+
+    .package-wrapper{
+
+        width:90%;
+
+    }
+
+    .package-title{
+
+        font-size:34px;
+
+    }
+
+    .guide-wrapper{
+
+        width:90%;
+
+    }
+
+    .guide-inner{
+
+        width:90%;
+
+    }
+
+    .guide-character{
+
+        height:80%;
+
+    }
+    
+
+
+}
+
+
+@media (max-width:767.98px){
+
+    .logo img{
+        height:50px;
+    }
+
+    .section-title{
+        font-size:28px;
+        text-align:center;
+        width:100%;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .search-box input{
+        min-width:0;
+        width:100%;
+    }
+
+    .history-btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .category{
+        width:100%;
+        max-width:320px;
+    }
+
+    
+
+    footer{
+        font-size:14px;
+    }
+
+    .col-game{
+        width:50%;
+    }
+
+    .w-80{
+        width:95%;
+    }
+
+    .row.g-4 > div{
+        border-bottom:1px solid #eee;
+        padding-bottom:20px;
+    }
+
+    .row.g-4 > div:last-child{
+        border-bottom:none;
+        padding-bottom:0;
+    }
+
+    .info-title{
+        font-size:20px;
+    }
+
+    .info-value{
+        font-size:20px;
+    }
+
+    .coin-balance-icon{
+        width:24px;
+        height:24px;
+    }
+
+    .payment-wrapper{
+
+        width:100%;
+
+    }
+
+    .payment-title{
+
+        font-size:28px;
+
+        text-align:center;
+
+    }
+
+    .payment-card{
+
+        padding:22px 15px;
+
+    }
+
+    .payment-card img{
+
+        width:60px;
+
+        height:60px;
+
+    }
+
+    .package-wrapper{
+
+        width:100%;
+
+    }
+
+    .package-title{
+
+        text-align:center;
+
+        font-size:28px;
+
+    }
+
+    .package-content{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+    .buy-btn{
+
+        width:100%;
+
+    }
+
+    .guide-wrapper{
+
+        width:100%;
+
+    }
+
+    .guide-inner{
+
+        width:92%;
+
+        padding:30px 0;
+
+    }
+
+    .guide-title{
+
+        font-size:28px;
+
+        text-align:center;
+
+    }
+
+    .guide-character{
+
+        display:none;
+
+    }
+
+    .feature-item{
+
+        margin-bottom:20px;
+
+    }
+
+}
+
+
+@media (max-width:575.98px){
+
+    .banner{
+        padding:30px 0;
+    }
+
+    .banner-content{
+        border-radius:18px;
+    }
+
+    .character img{
+        width:100%;
+    }
+
+    .toast-message{
+        left:20px;
+        right:20px;
+        top:20px;
+        text-align:center;
+    }
+
+    .user-info{
+        flex-wrap:wrap;
+        justify-content:center;
+        text-align:center;
+    }
+
+    .user-info-card{
+        padding:20px 15px;
+    }
+
+    .info-title{
+        font-size:18px;
+    }
+
+    .info-value{
+        font-size:18px;
+    }
+
+    .payment-title{
+
+        font-size:24px;
+
+    }
+
+    .payment-card{
+
+        padding:18px 12px;
+
+    }
+
+    .payment-card img{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .package-title{
+
+        font-size:24px;
+
+    }
+
+    .package-name,
+
+    .package-price{
+
+        font-size:11px;
+
+    }
+
+    .buy-btn{
+
+        font-size:12px;
+
+        padding:8px 14px;
+
+    }
+
+    .guide-number{
+
+        width:36px;
+
+        height:36px;
+
+        font-size:18px;
+
+    }
+
+    .guide-title{
+
+        font-size:24px;
+
+    }
+
+    .guide-bottom{
+
+        padding:25px 20px;
+
+    }
+
+}
